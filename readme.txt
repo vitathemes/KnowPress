@@ -10,11 +10,9 @@ Stable tag: 1.0.0
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-KnowPress is a fast and minimal theme for documentations.
-
 == Description ==
 
-KnowPress is a fast and minimal theme for documentations.
+KnowPress is a fast and minimal theme for documentation sites.
 
 == Features ==
 * No additional JS

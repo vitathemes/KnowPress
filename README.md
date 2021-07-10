@@ -1,5 +1,5 @@
 # KnowPress - [Demo](demo.vitathemes.com/knowpress) | [Download](https://wordpress.org/themes/knowpress/)
-KnowPress is a simple, super fast, and content-first blog theme
+KnowPress is a fast and minimal theme for documentation sites.
 
 ![Home Page](screenshot.jpg)
 
