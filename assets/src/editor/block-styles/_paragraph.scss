@@ -1,0 +1,59 @@
+.block-editor-block-styles__item-preview .block-editor-block-preview__container .is-root-container {
+
+  p.is-style-message {
+    padding: 4px;
+    background-color: $knowpress_message_bg;
+    border-left: 8px solid $knowpress_message_border;
+    margin: 5px;
+    font-size: 26px !important;
+    display: block !important;
+  }
+
+  p.is-style-message-warning {
+    padding: 4px;
+    background-color: $knowpress_warning_message_bg;
+    border-left: 8px solid $knowpress_warning_message_border;
+    margin: 5px;
+    font-size: 26px !important;
+    display: block !important;
+  }
+
+  p.is-style-message-danger {
+    padding: 4px;
+    background-color: $knowpress_danger_message_bg;
+    border-left: 8px solid $knowpress_danger_message_border;
+    margin: 5px;
+    font-size: 26px !important;
+    display: block !important;
+  }
+}
+
+p.is-style-message {
+  padding: 16px;
+  background-color: $knowpress_message_bg;
+  border-left: 4px solid $knowpress_message_border;
+
+  @media screen and (min-width: 567px) {
+    padding: 20px;
+  }
+}
+
+p.is-style-message-warning {
+  padding: 16px;
+  background-color: $knowpress_warning_message_bg;
+  border-left: 4px solid $knowpress_warning_message_border;
+
+  @media screen and (min-width: 567px) {
+    padding: 20px;
+  }
+}
+
+p.is-style-message-danger {
+  padding: 16px;
+  background-color: $knowpress_danger_message_bg;
+  border-left: 4px solid $knowpress_danger_message_border;
+
+  @media screen and (min-width: 567px) {
+    padding: 20px;
+  }
+}

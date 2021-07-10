@@ -1,0 +1,44 @@
+.c-widget {
+  margin: 0 0 rem(32px);
+}
+
+.c-widget-area {
+  width: 100%;
+
+  @include mq(tablet) {
+    width: calc(50% - 1rem);
+
+    &:first-of-type {
+      margin-right: 1rem;
+    }
+
+    &:last-of-type {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.c-widget__title {
+  margin: 0 0 0.75em;
+}
+
+.s-widget {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: rem(8px);
+  }
+
+  a {
+    color: $knowpress_secondary_text_color;
+    text-decoration: none;
+
+    &:hover {
+      color: $knowpress_primary_color;
+    }
+  }
+}

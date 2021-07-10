@@ -1,0 +1,52 @@
+{
+  "name": "knowpress",
+  "version": "1.0.0",
+  "description": "KnowPress is a fast and minimal theme for documentations.",
+  "author": "VitaThemes",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/vitathemes/knowpress",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitathemes/knowpress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitathemes/knowpress/issues"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.0",
+    "browser-sync": "^2.26.14",
+    "dir-archiver": "^1.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "watch": "gulp",
+    "compile:rtl": "gulp rtlcss"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-rtlcss": "^1.4.1",
+    "sass-mq": "^5.0.1",
+    "simplebar": "^5.3.4"
+  }
+}

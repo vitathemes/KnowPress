@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+  font: 16px/1.5 $knowpress_default_font-family;
+  color: $knowpress_primary_text_color;
+
+  @include mq(tablet) {
+    font: 16px/1.5 $knowpress_default_font-family;
+  }
+
+  @include mq(desktop) {
+    font: 16px/1.5 $knowpress_default_font-family;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font: 18px/1.5 $knowpress_default_font-family;
+  }
+}

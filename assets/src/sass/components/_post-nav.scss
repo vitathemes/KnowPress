@@ -1,0 +1,59 @@
+.c-post-nav {
+
+}
+
+.s-post-nav {
+
+  .wedocs-doc-nav {
+    padding: 0;
+    border: 0;
+    display: flex;
+    margin: rem(16px) 0;
+    flex-wrap: wrap;
+
+    @include mq(mobile) {
+      flex-wrap: nowrap;
+    }
+
+    span {
+      width: 100%;
+      margin-bottom: rem(16px);
+
+      @include mq(mobile) {
+        width: calc(50% - 0.5rem);
+
+        &:first-of-type {
+          margin-right: 0.5rem;
+        }
+
+        &:last-of-type {
+          margin-left: 0.5rem;
+        }
+      }
+
+      &.nav-next:first-of-type {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    span a {
+      padding: rem(16px 10px);
+      border: 1px solid $knowpress_border_color;
+      transition: $knowpress_global_transition;
+      display: block;
+      color: $knowpress_primary_text_color;
+      text-decoration: none;
+
+      @include mq(tablet) {
+        padding: rem(20px);
+      }
+
+      &:hover, &:focus {
+        color: $knowpress_secondary_text_color;
+        background-color: $knowpress_card_bg_color;
+        border-color: $knowpress_card_bg_color !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+a {
+  transition: $knowpress_global_transition;
+  color: $knowpress_primary_color;
+
+  &:hover {
+    color: $knowpress_primary_text_color;
+  }
+}

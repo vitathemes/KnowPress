@@ -1,0 +1,16 @@
+.c-main {
+  margin-top: 1.875rem;
+  min-height: 65vh;
+
+  @include mq($from: desktop, $until: wide) {
+    transform: translateX(20%);
+  }
+}
+
+.content-area .site-main {
+  margin-top: 1.875rem;
+
+  @include mq($from: desktop, $until: wide) {
+    transform: translateX(20%);
+  }
+}

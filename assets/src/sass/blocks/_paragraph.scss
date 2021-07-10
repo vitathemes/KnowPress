@@ -1,0 +1,17 @@
+p.is-style-message {
+  padding: rem(20px);
+  background-color: $knowpress_message_bg;
+  border-left: 4px solid $knowpress_message_border;
+}
+
+p.is-style-message-warning {
+  padding: rem(20px);
+  background-color: $knowpress_warning_message_bg;
+  border-left: 4px solid $knowpress_warning_message_border;
+}
+
+p.is-style-message-danger {
+  padding: rem(20px);
+  background-color: $knowpress_danger_message_bg;
+  border-left: 4px solid $knowpress_danger_message_border;
+}

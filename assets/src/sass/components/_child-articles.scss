@@ -1,0 +1,60 @@
+.c-child-articles {
+  background-color: $knowpress_card_bg_color;
+  border-left: 3px solid $knowpress_primary_color;
+  padding: rem(16px);
+
+  @include mq(tablet) {
+    padding: rem(24px);
+  }
+
+  @include mq(desktop) {
+    padding: rem(32px) rem(24px) rem(24px) rem(32px);
+  }
+}
+
+.c-child-articles__title {
+  font-weight: 600;
+  font-size: rem(12px);
+  line-height: rem(18px);
+  color: $knowpress_secondary_text_color;
+  margin: 0 0 rem(16px);
+  text-transform: uppercase;
+}
+
+.c-child-articles__list {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.s-child-articles-list {
+
+  li {
+    width: 100%;
+    margin-bottom: rem(8px);
+
+    @include mq(mobile) {
+      width: 50%;
+    }
+
+    ul {
+      padding-left: 1rem;
+      margin: rem(8px) 0 0;
+    }
+
+    li {
+      width: 100%;
+    }
+
+    a {
+      color: $knowpress_primary_text_color;
+      text-decoration: none;
+
+      &:hover {
+        color: $knowpress_primary_color;
+      }
+    }
+  }
+}

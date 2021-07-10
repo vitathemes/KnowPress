@@ -1,0 +1,17 @@
+ul.is-style-two-col, ol.is-style-two-col {
+  padding: 16px 16px 4px 24px;
+  background-color: $knowpress_list_bg;
+  border-left: 4px solid $knowpress_list_border;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 567px) {
+    padding: 30px 30px 18px 40px;
+  }
+
+  li {
+    width: calc(50% - 10px);
+    padding-right: 10px;
+    margin-bottom: 0.75rem;
+  }
+}

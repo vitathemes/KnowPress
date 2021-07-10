@@ -1,0 +1,28 @@
+.c-branding {
+
+}
+
+.s-branding {
+
+  .custom-logo {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 50px;
+  }
+}
+
+.c-branding__title {
+  margin: 0;
+  font-size: rem(18px);
+  line-height: 1.29;
+  font-weight: 600;
+  color: $knowpress_primary_text_color;
+  white-space: nowrap;
+}
+
+
+.c-branding__title__link {
+  text-decoration: none;
+  color: inherit;
+}

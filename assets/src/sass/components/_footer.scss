@@ -1,0 +1,29 @@
+.c-footer {
+  @include mq($from: desktop, $until: wide) {
+    transform: translateX(20%);
+  }
+}
+
+.c-footer__widgets {
+  margin-top: rem(48px);
+
+  @include mq(tablet) {
+    display: flex;
+  }
+}
+
+.c-footer__info {
+  font-size: rem(14px);
+  color: $knowpress_primary_text_color;
+  padding: rem(20px) 0;
+}
+
+.s-credit {
+  a {
+    color: $knowpress_primary_text_color;
+
+    &:hover {
+      color: $knowpress_primary_color;
+    }
+  }
+}
