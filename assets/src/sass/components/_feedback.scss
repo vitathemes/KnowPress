@@ -26,6 +26,10 @@
     font-size: rem(13px);
     flex-direction: column;
 
+    @include mq(mobile) {
+      flex-direction: row;
+    }
+
     &::before, &::after {
       content: unset !important;
     }
@@ -42,6 +46,8 @@
     .vote-link-wrap {
       margin-top: 0;
       display: flex;
+      margin-right: 0;
+      margin-left: 0;
     }
 
     @media screen and (min-width: 359px) {
@@ -53,10 +59,6 @@
       align-items: center;
       justify-content: space-between;
     }
-  }
-
-  @include mq(mobile) {
-    flex-direction: row;
   }
 
   .vote-link-wrap {
@@ -110,8 +112,8 @@
 
       &::before {
         content: '';
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-bottom: 5px solid $knowpress_primary_color;

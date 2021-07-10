@@ -60,7 +60,7 @@ function knowpress_customize_preview_js() {
 	wp_enqueue_script( 'knowpress-customizer',
 		get_template_directory_uri() . '/js/customizer.js',
 		array( 'customize-preview' ),
-		knowpress_VERSION,
+		KNWOPRESS_VERSION,
 		true );
 }
 

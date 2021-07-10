@@ -135,15 +135,14 @@
       }
     }
   }
-
 }
 
-.rtl {
 
+.rtl {
   .c-search-form__submit {
-    right: 0 !important;
+    right: rem(8px) !important;
     left: unset;
-    padding-right: rem(8px);
+    padding-right: rem(8px) !important;
     padding-left: 0;
   }
 

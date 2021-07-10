@@ -71,6 +71,12 @@
   fill: $knowpress_primary_text_color;
 }
 
+.rtl {
+  .c-sidebar__close__icon {
+    transform: rotate(180deg) !important;
+  }
+}
+
 .c-sidebar__docs {
   margin-top: rem(16px);
   padding: 0 0 0 rem(32px);

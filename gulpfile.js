@@ -42,13 +42,6 @@ const rtlCssTask = ( cb ) => {
 	cb();
 };
 
-const rtlCssConcatTask = ( cb ) => {
-	return gulp.src( [ './style.css', cssDest + 'style-rtl.css' ] )
-		.pipe( concat( 'style-rtl.css' ) )
-		.pipe( gulp.dest( './' ) );
-	cb();
-};
-
 const vendorScriptsTask = ( cb ) => {
 	return gulp.src( [ './node_modules/simplebar/dist/simplebar.js' ] )
 		.pipe( concat( 'scripts.js' ) )
@@ -63,7 +56,6 @@ const cssConcatExternalTask = ( cb ) => {
 	cb();
 }
 
-
 function liveServerTask( cb ) {
 	browserSync.init( {
 		proxy: 'knowpress-base.local',
@@ -74,5 +66,5 @@ function liveServerTask( cb ) {
 }
 
 exports.default = series( sassTask, cssConcatExternalTask, vendorScriptsTask, liveServerTask );
-exports.rtlcss = series( rtlCssTask, rtlCssConcatTask );
+exports.rtlcss = series( rtlCssTask );
 exports.editor = editorStylesTask;

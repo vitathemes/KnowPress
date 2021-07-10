@@ -881,9 +881,9 @@ html {
     fill: var(--knowpress-primary-color); }
 
 .rtl .c-search-form__submit {
-  right: 0 !important;
+  right: 0.5rem !important;
   left: unset;
-  padding-right: 0.5rem;
+  padding-right: 0.5rem !important;
   padding-left: 0; }
 
 .rtl .c-search-form__label__field {
@@ -1338,6 +1338,9 @@ ol.children {
 .c-sidebar__close__icon {
   fill: var(--knowpress-primary-text-color); }
 
+.rtl .c-sidebar__close__icon {
+  transform: rotate(180deg) !important; }
+
 .c-sidebar__docs {
   margin-top: 1rem;
   padding: 0 0 0 2rem;
@@ -1460,6 +1463,9 @@ ol.children {
 
 .c-card__icon {
   height: 1.5625rem; }
+
+.rtl .c-card__icon {
+  transform: rotate(180deg); }
 
 .c-docs {
   position: relative; }
@@ -1618,6 +1624,9 @@ ol.children {
   margin: 0;
   font-size: 0.8125rem;
   flex-direction: column; }
+  @media (min-width: 36em) {
+    .s-feedback .wedocs-feedback-wrap {
+      flex-direction: row; } }
   .s-feedback .wedocs-feedback-wrap::before, .s-feedback .wedocs-feedback-wrap::after {
     content: unset !important; }
   @media (min-width: 48em) {
@@ -1629,7 +1638,9 @@ ol.children {
       font-size: 1rem; } }
   .s-feedback .wedocs-feedback-wrap .vote-link-wrap {
     margin-top: 0;
-    display: flex; }
+    display: flex;
+    margin-right: 0;
+    margin-left: 0; }
   @media screen and (min-width: 359px) {
     .s-feedback .wedocs-feedback-wrap {
       font-size: 0.875rem; } }
@@ -1638,10 +1649,6 @@ ol.children {
       display: flex;
       align-items: center;
       justify-content: space-between; } }
-
-@media (min-width: 36em) {
-  .s-feedback {
-    flex-direction: row; } }
 
 .s-feedback .vote-link-wrap {
   margin-left: 0; }
@@ -1680,8 +1687,8 @@ ol.children {
     color: #fff; }
     .s-feedback a.wedocs-tip .count::before {
       content: '';
-      width: 0px;
-      height: 0px;
+      width: 0;
+      height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
       border-bottom: 5px solid var(--knowpress-primary-color);
@@ -1696,7 +1703,8 @@ ol.children {
 .c-docs-nav__list {
   padding: 0;
   margin: 0;
-  list-style: none; }
+  list-style: none;
+  min-width: 13.4375rem; }
 
 .s-docs-nav-list > li.current_page_item a {
   color: var(--knowpress-secondary-text-color); }

@@ -93,7 +93,11 @@ jQuery('.js-header-menu-toggle').on('click', function () {
         }, 300);
     }
     jQuery('.js-overlay').removeClass('is-hide');
-    jQuery('.js-sidebar').animate({width: 'toggle', left: '0'});
+    if (jQuery('body').hasClass('rtl')) {
+        jQuery('.js-sidebar').animate({width: 'toggle', right: '0'});
+    } else {
+        jQuery('.js-sidebar').animate({width: 'toggle', left: '0'});
+    }
 });
 
 jQuery('.js-sidebar-close').on('click', function () {

@@ -7,9 +7,10 @@
  * @package _s
  */
 
-if ( ! defined( 'knowpress_VERSION' ) ) {
+if ( ! defined( 'KNWOPRESS_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'knowpress_VERSION', '1.0.0' );
+	$knowpress_theme_data = wp_get_theme();
+	define( 'KNWOPRESS_VERSION', $knowpress_theme_data->get( 'Version' ) );
 }
 
 if ( ! function_exists( 'knowpress_setup' ) ) :
@@ -179,20 +180,18 @@ add_action( 'widgets_init', 'knowpress_widgets_init' );
  */
 function knowpress_scripts() {
 	wp_enqueue_style( 'knowpress-style',
-		get_template_directory_uri() . '/assets/css/style.css',
-		array(),
-		knowpress_VERSION );
+		get_template_directory_uri() . '/assets/css/style.css', array(), KNWOPRESS_VERSION );
 	wp_style_add_data( 'knowpress-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'knowpress-scripts-vendor',
 		get_template_directory_uri() . '/assets/js/scripts.js',
 		array(),
-		knowpress_VERSION,
+		KNWOPRESS_VERSION,
 		true );
 	wp_enqueue_script( 'knowpress-scripts',
 		get_template_directory_uri() . '/assets/js/main.js',
 		array( 'jquery' ),
-		knowpress_VERSION,
+		KNWOPRESS_VERSION,
 		true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

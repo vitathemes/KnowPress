@@ -85,3 +85,7 @@
 .c-card__icon {
   height: rem(25px);
 }
+
+.rtl .c-card__icon {
+  transform: rotate(180deg);
+}
