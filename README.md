@@ -4,6 +4,7 @@ KnowPress is a fast and minimal theme for documentation sites.
 ![Home Page](screenshot.jpg)
 
 ## Features
+* Compatible with [WeDocs](https://wordpress.org/plugins/wedocs/)
 * No additional JS
 * Sass for stylesheets
 * Fast & lightweight (Google Speed (PageSpeed Insights): 100/100)

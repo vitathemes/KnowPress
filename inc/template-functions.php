@@ -36,7 +36,6 @@ function knowpress_pingback_header() {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-
 add_action( 'wp_head', 'knowpress_pingback_header' );
 
 if ( ! function_exists( 'knowpress_theme_settings' ) ) {
@@ -78,6 +77,9 @@ add_action( 'enqueue_block_editor_assets', 'knowpress_theme_settings' );
 // Get fonts in editor
 if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
 	function knowpress_editor_fonts() {
+		if ( ! function_exists( 'kirki' ) ) {
+		    return;
+		}
 		?>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

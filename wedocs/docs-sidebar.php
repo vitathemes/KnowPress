@@ -11,9 +11,7 @@
 		$parent = $post->ID;
 	}
 
-	// var_dump( $parent, $ancestors, $root );
-	$walker = new Docpress_page_walker();
-	//$walker   = new WeDevs\WeDocs\Walker();
+	$walker = new Knowpress_page_walker();
 
 	$sidebar_args = [
 		'title_li'  => '',
@@ -30,12 +28,13 @@
 
 	$children = wp_list_pages( $sidebar_args );
 
-	if ( ! get_theme_mod( 'show_sidebar_all_pages', false ) ) :
+	if ( $children ) {
+		if ( ! get_theme_mod( 'show_sidebar_all_pages', false ) ) :
+			?>
+            <h4 class="c-docs-nav__title"><?php echo get_post_field( 'post_title', $parent, 'display' ); ?></h4>
+		<?php
+		endif;
 		?>
-        <h4 class="c-docs-nav__title"><?php echo get_post_field( 'post_title', $parent, 'display' ); ?></h4>
-	<?php
-	endif;
-	if ( $children ) { ?>
         <ul class="c-docs-nav__list s-docs-nav-list">
 			<?php echo $children; ?>
         </ul>

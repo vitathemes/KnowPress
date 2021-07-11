@@ -1,7 +1,7 @@
 <?php
 
 
-class Docpress_page_walker extends Walker_Page {
+class Knowpress_page_walker extends Walker_Page {
 	/**
 	 * Initialize the class
 	 */

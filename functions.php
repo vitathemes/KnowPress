@@ -204,7 +204,7 @@ add_action( 'wp_enqueue_scripts', 'knowpress_scripts' );
 /**
  * Walker_Page extended class
  */
-require get_template_directory() . '/classes/Docpress_page_walker.php';
+require get_template_directory() . '/classes/Knowpress_page_walker.php';
 
 /**
  * Implement the Custom Header feature.

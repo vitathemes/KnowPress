@@ -123,7 +123,7 @@ jQuery('.js-overlay').on('click', function () {
 
 jQuery('.js-search-toggle').on('click', function () {
     jQuery(this).toggleClass('is-open');
-    jQuery('.js-header-search-box').slideToggle();
+    jQuery('.js-header-search-box').slideToggle('fast');
     jQuery('.js-header').toggleClass('is-search-open');
 });
 

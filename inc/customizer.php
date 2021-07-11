@@ -817,7 +817,7 @@ if ( function_exists( 'kirki' ) ) {
 			/**
 			 *  Add edit buttons to customizer preview
 			 */
-			function wp_indigo_add_edit_icons( $wp_customize ) {
+			function knowpress_add_edit_icons( $wp_customize ) {
 				$wp_customize->selective_refresh->add_partial( 'show_slider_menu_index',
 					array(
 						'selector' => '.c-categories-list',
@@ -855,7 +855,7 @@ if ( function_exists( 'kirki' ) ) {
 					) );
 			}
 
-			add_action( 'customize_preview_init', 'wp_indigo_add_edit_icons' );
+			add_action( 'customize_preview_init', 'knowpress_add_edit_icons' );
 		}
 	);
 }
