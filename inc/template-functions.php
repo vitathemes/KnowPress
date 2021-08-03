@@ -98,55 +98,69 @@ if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
 		$h5_font   = get_theme_mod( 'typography_h5', array() );
 		$h6_font   = get_theme_mod( 'typography_h6', array() );
 
-		if ( $base_font['variant'] == 400 || $base_font['variant'] == 'regular' ) {
-			echo '<link href="https://fonts.googleapis.com/css2?family=' . $base_font['font-family'] . '&display=swap" rel="stylesheet">';
-		} else {
-			echo '<link href="https://fonts.googleapis.com/css2?family=' . $base_font['font-family'] . ':wght@' . $base_font['variant'] . '&display=swap" rel="stylesheet">';
-		}
-
-		if ( $h1_font['variant'] == 400 || $h1_font['variant'] == 'regular' ) {
-			echo '<link href="https://fonts.googleapis.com/css2?family=' . $h1_font['font-family'] . '&display=swap" rel="stylesheet">';
-		} else {
-			echo '<link href="https://fonts.googleapis.com/css2?family=' . $h1_font['font-family'] . ':wght@' . $h1_font['variant'] . '&display=swap" rel="stylesheet">';
-		}
-
-		if ( $h2_font['variant'] != $h1_font['variant'] && $h2_font['font-family'] != $h1_font['font-family'] ) {
-			if ( $h2_font['variant'] == 400 || $h2_font['variant'] == 'regular' ) {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h2_font['font-family'] . '&display=swap" rel="stylesheet">';
+		if (!empty($base_font)) {
+			if ( $base_font['variant'] == 400 || $base_font['variant'] == 'regular' ) {
+				echo '<link href="https://fonts.googleapis.com/css2?family=' . $base_font['font-family'] . '&display=swap" rel="stylesheet">';
 			} else {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h2_font['font-family'] . ':wght@' . $h2_font['variant'] . '&display=swap" rel="stylesheet">';
+				echo '<link href="https://fonts.googleapis.com/css2?family=' . $base_font['font-family'] . ':wght@' . $base_font['variant'] . '&display=swap" rel="stylesheet">';
 			}
 		}
 
-		if ( $h3_font['variant'] != $h1_font['variant'] && $h3_font['font-family'] != $h1_font['font-family'] || $h3_font['variant'] != $h2_font['variant'] && $h3_font['font-family'] != $h2_font['font-family'] ) {
-			if ( $h3_font['variant'] == 400 || $h3_font['variant'] == 'regular' ) {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h3_font['font-family'] . '&display=swap" rel="stylesheet">';
-			} else {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h3_font['font-family'] . ':wght@' . $h3_font['variant'] . '&display=swap" rel="stylesheet">';
-			}
+		if (!empty($h1_font)) {
+            if ( $h1_font['variant'] == 400 || $h1_font['variant'] == 'regular' ) {
+                echo '<link href="https://fonts.googleapis.com/css2?family=' . $h1_font['font-family'] . '&display=swap" rel="stylesheet">';
+            } else {
+                echo '<link href="https://fonts.googleapis.com/css2?family=' . $h1_font['font-family'] . ':wght@' . $h1_font['variant'] . '&display=swap" rel="stylesheet">';
+            }
 		}
 
-		if ( $h4_font['variant'] != $h1_font['variant'] && $h4_font['font-family'] != $h1_font['font-family'] || $h4_font['variant'] != $h2_font['variant'] && $h4_font['font-family'] != $h2_font['font-family'] || $h4_font['variant'] != $h3_font['variant'] && $h4_font['font-family'] != $h3_font['font-family'] ) {
-			if ( $h4_font['variant'] == 400 || $h4_font['variant'] == 'regular' ) {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h4_font['font-family'] . '&display=swap" rel="stylesheet">';
-			} else {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h4_font['font-family'] . ':wght@' . $h4_font['variant'] . '&display=swap" rel="stylesheet">';
-			}
+		if (!empty($h2_font)) {
+            if ( $h2_font['variant'] != $h1_font['variant'] && $h2_font['font-family'] != $h1_font['font-family'] ) {
+                if ( $h2_font['variant'] == 400 || $h2_font['variant'] == 'regular' ) {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h2_font['font-family'] . '&display=swap" rel="stylesheet">';
+                } else {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h2_font['font-family'] . ':wght@' . $h2_font['variant'] . '&display=swap" rel="stylesheet">';
+                }
+            }
 		}
 
-		if ( $h5_font['variant'] != $h1_font['variant'] && $h5_font['font-family'] != $h1_font['font-family'] || $h5_font['variant'] != $h2_font['variant'] && $h5_font['font-family'] != $h2_font['font-family'] || $h5_font['variant'] != $h3_font['variant'] && $h5_font['font-family'] != $h3_font['font-family'] || $h5_font['variant'] != $h4_font['variant'] && $h5_font['font-family'] != $h4_font['font-family'] ) {
-			if ( $h5_font['variant'] == 400 || $h5_font['variant'] == 'regular' ) {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h5_font['font-family'] . '&display=swap" rel="stylesheet">';
-			} else {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h5_font['font-family'] . ':wght@' . $h4_font['variant'] . '&display=swap" rel="stylesheet">';
-			}
+		if (!empty($h3_font)) {
+            if ( $h3_font['variant'] != $h1_font['variant'] && $h3_font['font-family'] != $h1_font['font-family'] || $h3_font['variant'] != $h2_font['variant'] && $h3_font['font-family'] != $h2_font['font-family'] ) {
+                if ( $h3_font['variant'] == 400 || $h3_font['variant'] == 'regular' ) {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h3_font['font-family'] . '&display=swap" rel="stylesheet">';
+                } else {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h3_font['font-family'] . ':wght@' . $h3_font['variant'] . '&display=swap" rel="stylesheet">';
+                }
+            }
 		}
 
-		if ( $h6_font['variant'] != $h1_font['variant'] && $h6_font['font-family'] != $h1_font['font-family'] || $h6_font['variant'] != $h2_font['variant'] && $h6_font['font-family'] != $h2_font['font-family'] || $h6_font['variant'] != $h3_font['variant'] && $h6_font['font-family'] != $h3_font['font-family'] || $h6_font['variant'] != $h4_font['variant'] && $h6_font['font-family'] != $h4_font['font-family'] || $h6_font['variant'] != $h4_font['variant'] && $h6_font['font-family'] != $h4_font['font-family'] || $h6_font['variant'] != $h5_font['variant'] && $h6_font['font-family'] != $h5_font['font-family'] ) {
-			if ( $h6_font['variant'] == 400 || $h6_font['variant'] == 'regular' ) {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h6_font['font-family'] . '&display=swap" rel="stylesheet">';
-			} else {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $h6_font['font-family'] . ':wght@' . $h6_font['variant'] . '&display=swap" rel="stylesheet">';
+		if (!empty($h4_font)) {
+            if ( $h4_font['variant'] != $h1_font['variant'] && $h4_font['font-family'] != $h1_font['font-family'] || $h4_font['variant'] != $h2_font['variant'] && $h4_font['font-family'] != $h2_font['font-family'] || $h4_font['variant'] != $h3_font['variant'] && $h4_font['font-family'] != $h3_font['font-family'] ) {
+                if ( $h4_font['variant'] == 400 || $h4_font['variant'] == 'regular' ) {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h4_font['font-family'] . '&display=swap" rel="stylesheet">';
+                } else {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h4_font['font-family'] . ':wght@' . $h4_font['variant'] . '&display=swap" rel="stylesheet">';
+                }
+            }
+		}
+
+		if (!empty($h5_font)) {
+            if ( $h5_font['variant'] != $h1_font['variant'] && $h5_font['font-family'] != $h1_font['font-family'] || $h5_font['variant'] != $h2_font['variant'] && $h5_font['font-family'] != $h2_font['font-family'] || $h5_font['variant'] != $h3_font['variant'] && $h5_font['font-family'] != $h3_font['font-family'] || $h5_font['variant'] != $h4_font['variant'] && $h5_font['font-family'] != $h4_font['font-family'] ) {
+                if ( $h5_font['variant'] == 400 || $h5_font['variant'] == 'regular' ) {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h5_font['font-family'] . '&display=swap" rel="stylesheet">';
+                } else {
+                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h5_font['font-family'] . ':wght@' . $h4_font['variant'] . '&display=swap" rel="stylesheet">';
+                }
+            }
+		}
+
+		if (!empty($h6_font)) {
+			if ( $h6_font['variant'] != $h1_font['variant'] && $h6_font['font-family'] != $h1_font['font-family'] || $h6_font['variant'] != $h2_font['variant'] && $h6_font['font-family'] != $h2_font['font-family'] || $h6_font['variant'] != $h3_font['variant'] && $h6_font['font-family'] != $h3_font['font-family'] || $h6_font['variant'] != $h4_font['variant'] && $h6_font['font-family'] != $h4_font['font-family'] || $h6_font['variant'] != $h4_font['variant'] && $h6_font['font-family'] != $h4_font['font-family'] || $h6_font['variant'] != $h5_font['variant'] && $h6_font['font-family'] != $h5_font['font-family'] ) {
+				if ( $h6_font['variant'] == 400 || $h6_font['variant'] == 'regular' ) {
+					echo '<link href="https://fonts.googleapis.com/css2?family=' . $h6_font['font-family'] . '&display=swap" rel="stylesheet">';
+				} else {
+					echo '<link href="https://fonts.googleapis.com/css2?family=' . $h6_font['font-family'] . ':wght@' . $h6_font['variant'] . '&display=swap" rel="stylesheet">';
+				}
 			}
 		}
 
@@ -208,6 +222,10 @@ if ( ! function_exists( 'knowpress_editor_typography' ) ) {
 		$h4_font   = get_theme_mod( 'typography_h4', array() );
 		$h5_font   = get_theme_mod( 'typography_h5', array() );
 		$h6_font   = get_theme_mod( 'typography_h6', array() );
+
+		if (empty($base_font)) {
+		    return;
+		}
 		?>
         <style>
             .editor-styles-wrapper {
