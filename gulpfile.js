@@ -58,7 +58,7 @@ const cssConcatExternalTask = ( cb ) => {
 
 function liveServerTask( cb ) {
 	browserSync.init( {
-		proxy: 'knowpress-base.local',
+		proxy: 'knowledge-base.local',
 	} );
 	gulp.watch( [ sassSrc + '**/*.scss' ] ).on( 'change', series(sassTask, cssConcatExternalTask) );
 	gulp.watch( './**/*.php' ).on( 'change', browserSync.reload );

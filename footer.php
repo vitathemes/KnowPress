@@ -33,8 +33,9 @@
             <span class="js-credit">
                 <?php
                 /* translators: 1: Theme name, 2: Theme author. */
-                printf('Theme: %1$s by <a href="%2$s">%3$s</a>.' ,
+                printf('%1$s %2$s <a href="%3$s">%4$s</a>.' ,
 	                esc_html__('KnowPress', 'knowpress'),
+	                esc_html__('by', 'knowpress'),
 	                esc_url('http://vitathemes.com'),
 	                esc_html__('VitaThemes', 'knowpress') );
                 ?>

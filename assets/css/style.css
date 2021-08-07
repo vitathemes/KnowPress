@@ -726,6 +726,12 @@ html {
 .c-post {
   margin-bottom: 2.5rem; }
 
+.c-post__header {
+  margin-bottom: 0.75rem; }
+
+.c-post__title {
+  margin: 0 0 0.5rem; }
+
 .c-post__title__link {
   text-decoration: none;
   color: var(--knowpress-primary-color); }
@@ -741,6 +747,12 @@ html {
   text-decoration: none; }
   .s-post-meta a:hover {
     color: var(--knowpress-primary-text-color); }
+
+.c-post__content {
+  margin-top: 0.75rem; }
+
+.c-post__content--excerpt p {
+  margin: 0; }
 
 .c-post__footer {
   margin-top: 2rem;
@@ -1296,7 +1308,7 @@ ol.children {
       background-color: transparent;
       display: block;
       width: 28%;
-      padding: 2rem 0.5rem 2.5rem 1rem; } }
+      padding: 2rem 1.5rem 2.5rem 1.5rem; } }
   @media (min-width: 80em) {
     .c-sidebar {
       width: 22%;
@@ -1372,9 +1384,12 @@ ol.children {
   padding-bottom: 80px; }
   @media (min-width: 64em) {
     .c-sidebar__main {
-      padding-right: 3rem;
+      padding-right: 0.5rem;
       margin-top: 4rem;
       padding-bottom: 96px; } }
+  @media (min-width: 80em) {
+    .c-sidebar__main {
+      padding-right: 3rem; } }
 
 .c-sidebar__credit {
   margin-top: auto;

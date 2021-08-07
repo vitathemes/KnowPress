@@ -16,7 +16,7 @@
     background-color: transparent;
     display: block;
     width: 28%;
-    padding: rem(32px 8px 40px 16px);
+    padding: rem(32px 24px 40px 24px);
   }
 
   @include mq(wide) {
@@ -116,9 +116,13 @@
   padding-bottom: 80px;
 
   @include mq(desktop) {
-    padding-right: rem(48px);
+    padding-right: rem(8px);
     margin-top: rem(64px);
     padding-bottom: 96px;
+  }
+
+  @include mq(wide) {
+    padding-right: rem(48px);
   }
 }
 

@@ -32,7 +32,7 @@
 
 	<?php knowpress_post_thumbnail(); ?>
 
-    <div class="c-post__content">
+    <div class="c-post__content<?php if ( ! is_singular() ) { echo "c-post__content--excerpt"; } ?>">
 		<?php
 		if ( is_singular() ) {
 			the_content();

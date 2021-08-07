@@ -3,11 +3,11 @@
 }
 
 .c-post__header {
-
+  margin-bottom: rem(12px);
 }
 
 .c-post__title {
-
+  margin: 0 0 rem(8px);
 }
 
 .c-post__title__link {
@@ -33,6 +33,17 @@
     &:hover {
       color: $knowpress_primary_text_color;
     }
+  }
+}
+
+.c-post__content {
+  margin-top: rem(12px);
+}
+
+.c-post__content--excerpt {
+
+  p {
+    margin: 0;
   }
 }
 
