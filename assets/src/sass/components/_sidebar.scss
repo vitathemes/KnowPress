@@ -113,10 +113,12 @@
   display: flex;
   flex-direction: column;
   padding-right: rem(28px);
+  padding-bottom: 80px;
 
   @include mq(desktop) {
     padding-right: rem(48px);
     margin-top: rem(64px);
+    padding-bottom: 96px;
   }
 }
 

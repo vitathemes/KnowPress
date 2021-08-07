@@ -23,6 +23,12 @@
     color: $knowpress_secondary_text_color;
   }
 
+  .item__header {
+    display: block;
+    width: 100%;
+    padding-right: 30px;
+  }
+
   & > li a:hover {
     color: $knowpress_primary_color;
   }
@@ -58,9 +64,8 @@
       align-items: center;
       justify-content: center;
       right: 0;
-      width: 1.25rem;
-      height: 1.25rem;
-      padding-right: rem(6px);
+      width: 2rem;
+      height: 1.5rem;
 
       &.is-active {
         span {
