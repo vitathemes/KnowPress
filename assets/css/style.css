@@ -710,6 +710,9 @@ html {
   .s-nav a:hover {
     color: var(--knowpress-primary-text-color); }
 
+.s-nav li.current-menu-item a {
+  color: var(--knowpress-primary-text-color); }
+
 .c-main {
   margin-top: 1.875rem;
   min-height: 65vh; }
@@ -955,7 +958,9 @@ html {
 .comment {
   list-style: none;
   padding: 0;
-  margin: 24px 0; }
+  margin: 24px 0;
+  border-bottom: 1px solid var(--knowpress-border-color);
+  padding-bottom: 1.25rem; }
   .comment .comment-respond {
     margin-top: 40px; }
     .comment .comment-respond .comment-form {
@@ -989,18 +994,20 @@ html {
     vertical-align: middle; }
   .comment .avatar {
     vertical-align: middle;
-    border-radius: 0.25rem; }
+    border-radius: 0.25rem;
+    margin-right: 0.5rem; }
   .comment .comment {
     padding: 0.5rem 0.25rem 0.25rem;
-    margin: 1.25rem 0 0; }
+    margin: 1.25rem 0 0;
+    border-bottom: none; }
   .comment .comment-meta {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap; }
+    flex-wrap: wrap; }
     @media (min-width: 64em) {
       .comment .comment-meta {
         flex-direction: row;
-        flex-wrap: nowrap; } }
+        flex-wrap: wrap; } }
   .comment .comment-metadata a * {
     font-size: 0.813em;
     text-decoration: none;
@@ -1260,6 +1267,10 @@ ol.children {
 .comments-area > .comment-list {
   padding: 0; }
 
+.comment-awaiting-moderation {
+  font-size: 13px;
+  margin: 1rem 0 0.75rem; }
+
 .comments-area .comment-form-comment textarea {
   width: 100%; }
 
@@ -1277,7 +1288,7 @@ ol.children {
   font-weight: 500;
   border: none; }
   .comments-area .submit:hover {
-    background-color: var(--knowpress-primary-color); }
+    background-color: var(--knowpress-primary-text-color); }
 
 .comments-area .comment-list {
   list-style: none; }
@@ -1308,11 +1319,11 @@ ol.children {
       background-color: transparent;
       display: block;
       width: 28%;
-      padding: 2rem 1.5rem 2.5rem 1.5rem; } }
+      padding: 0 1.5rem 2.5rem 1.5rem; } }
   @media (min-width: 80em) {
     .c-sidebar {
       width: 22%;
-      padding: 2rem 0rem 2.5rem 2.375rem; } }
+      padding: 0 0rem 2.5rem 2.375rem; } }
 
 .admin-bar .c-sidebar {
   top: 32px; }
@@ -1395,6 +1406,11 @@ ol.children {
   margin-top: auto;
   font-size: 0.75rem;
   padding-top: 0.5rem; }
+
+.c-branding {
+  height: 5.4rem;
+  display: flex;
+  align-items: center; }
 
 .s-branding .custom-logo {
   width: auto;
@@ -1729,7 +1745,10 @@ ol.children {
 .s-docs-nav-list .item__header {
   display: block;
   width: 100%;
-  padding-right: 30px; }
+  padding-right: 30px;
+  display: block; }
+  .s-docs-nav-list .item__header a {
+    display: block; }
 
 .s-docs-nav-list > li a:hover {
   color: var(--knowpress-primary-color); }
@@ -1739,14 +1758,16 @@ ol.children {
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.0625rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   position: relative; }
   .s-docs-nav-list li.current_page_ancestor ul {
     display: block; }
   .s-docs-nav-list li a {
     color: var(--knowpress-primary-text-color);
     text-decoration: none;
-    border-radius: 4px; }
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    padding: 0.5rem 0; }
   .s-docs-nav-list li button {
     padding: 0;
     background-color: transparent;
@@ -1757,20 +1778,19 @@ ol.children {
     justify-content: center;
     right: 0;
     width: 2rem;
-    height: 1.5rem; }
+    height: 2rem; }
     .s-docs-nav-list li button.is-active span {
       transform-origin: center center;
       transform: rotate(180deg); }
     .s-docs-nav-list li button span {
       transition: 0.15s; }
-    .s-docs-nav-list li button:hover span {
-      border-top-color: var(--knowpress-primary-color); }
-
-.s-docs-nav-list ul .item__header:hover > button .o-arrow {
-  border-top-color: #fff; }
+    .s-docs-nav-list li button:hover {
+      background-color: var(--knowpress-primary-color); }
+      .s-docs-nav-list li button:hover span {
+        border-top-color: #fff; }
 
 .s-docs-nav-list ul > li > .item__header button:hover > .o-arrow {
-  border-top-color: var(--knowpress-primary-color) !important; }
+  border-top-color: #fff !important; }
 
 .s-docs-nav-list ul.children li button {
   padding: 0;
@@ -1781,9 +1801,12 @@ ol.children {
   align-items: center;
   justify-content: center;
   right: 0;
-  width: 1.5rem;
-  height: 2rem;
-  padding-right: 0.375rem; }
+  width: 2rem;
+  height: 2rem; }
+  .s-docs-nav-list ul.children li button:hover {
+    background-color: var(--knowpress-primary-color); }
+    .s-docs-nav-list ul.children li button:hover span {
+      border-top-color: #fff; }
 
 .s-docs-nav-list ul {
   padding: 0;
@@ -1793,7 +1816,8 @@ ol.children {
 .s-docs-nav-list ul.children {
   display: none; }
   .s-docs-nav-list ul.children ul.children {
-    padding-left: 0.5rem; }
+    padding-left: 0.5rem;
+    margin-bottom: 1rem; }
 
 .s-docs-nav-list ul li {
   font-weight: normal;
@@ -1992,7 +2016,8 @@ input, textarea {
   padding: 0.75rem 0.75rem;
   border-radius: 0.25rem;
   transition: 0.15s;
-  border: 1px solid var(--knowpress-border-color); }
+  border: 1px solid var(--knowpress-border-color);
+  max-width: 100%; }
 
 button, [type="submit"] {
   padding: 0.75rem 1rem;
@@ -2039,12 +2064,13 @@ ul.is-style-two-col, ol.is-style-two-col {
     ul.is-style-two-col, ol.is-style-two-col {
       padding: 30px 30px 18px 40px; } }
   ul.is-style-two-col li, ol.is-style-two-col li {
-    width: 100%;
+    margin-left: 1.25rem;
+    width: calc(100% - 20px);
     padding-right: 0;
     margin-bottom: 0.75rem; }
     @media (min-width: 64em) {
       ul.is-style-two-col li, ol.is-style-two-col li {
-        width: calc(50% - 10px);
+        width: calc(50% - 30px);
         padding-right: 10px;
         margin-bottom: 0.75rem; } }
 

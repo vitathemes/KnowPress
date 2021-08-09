@@ -27,6 +27,11 @@
     display: block;
     width: 100%;
     padding-right: 30px;
+    display: block;
+
+    a {
+      display: block;
+    }
   }
 
   & > li a:hover {
@@ -38,7 +43,7 @@
     font-weight: 600;
     font-size: rem(14px);
     line-height: rem(17px);
-    margin-bottom: rem(32px);
+    margin-bottom: rem(24px);
     position: relative;
 
     &.current_page_ancestor {
@@ -51,8 +56,9 @@
     a {
       color: $knowpress_primary_text_color;
       text-decoration: none;
-
+      margin-right: rem(8px);
       border-radius: 4px;
+      padding: rem(8px) 0;
     }
 
     button {
@@ -65,7 +71,7 @@
       justify-content: center;
       right: 0;
       width: 2rem;
-      height: 1.5rem;
+      height: 2rem;
 
       &.is-active {
         span {
@@ -79,23 +85,18 @@
       }
 
       &:hover {
+        background-color: $knowpress_primary_color;
 
         span {
-          border-top-color: $knowpress_primary_color
+          border-top-color: #fff;
         }
       }
     }
   }
 
-  ul .item__header:hover {
-    & > button .o-arrow {
-      border-top-color: #fff;
-    }
-  }
-
   ul > li > .item__header button:hover {
     &  > .o-arrow {
-      border-top-color: $knowpress_primary_color !important;
+      border-top-color: #fff !important;
     }
   }
 
@@ -109,9 +110,16 @@
       align-items: center;
       justify-content: center;
       right: 0;
-      width: 1.5rem;
+      width: 2rem;
       height: 2rem;
-      padding-right: rem(6px);
+
+      &:hover {
+        background-color: $knowpress_primary_color;
+
+        span {
+          border-top-color: #fff;
+        }
+      }
     }
   }
 
@@ -126,6 +134,7 @@
 
     ul.children {
       padding-left: rem(8px);
+      margin-bottom: rem(16px);
     }
   }
 

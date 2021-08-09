@@ -25,7 +25,7 @@
 
 	<?php knowpress_post_thumbnail(); ?>
 
-	<div class="c-post__content">
+	<div class="c-post__content c-post__content--excerpt">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 

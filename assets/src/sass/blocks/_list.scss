@@ -10,12 +10,13 @@ ul.is-style-two-col, ol.is-style-two-col {
   }
 
   li {
-    width: 100%;
+    margin-left: rem(20px);
+    width: calc(100% - 20px);
     padding-right: 0;
     margin-bottom: 0.75rem;
 
     @include mq(desktop) {
-      width: calc(50% - 10px);
+      width: calc(50% - 30px);
       padding-right: 10px;
       margin-bottom: 0.75rem;
     }

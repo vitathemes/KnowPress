@@ -71,6 +71,8 @@
   list-style: none;
   padding: 0;
   margin: 24px 0;
+  border-bottom: 1px solid $knowpress_border_color;
+  padding-bottom: rem(20px);
 
   .comment-respond {
     margin-top: 40px;
@@ -121,21 +123,23 @@
   .avatar {
     vertical-align: middle;
     border-radius: rem(4px);
+    margin-right: rem(8px);
   }
 
   .comment {
     padding: rem(8px 4px 4px);
     margin: rem(20px) 0 0;
+    border-bottom: none;
   }
 
   .comment-meta {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     @include mq(desktop) {
       flex-direction: row;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
   }
 
@@ -503,4 +507,9 @@ ol.children:last-child {
 
 .comments-area > .comment-list {
   padding: 0;
+}
+
+.comment-awaiting-moderation {
+  font-size: 13px;
+  margin: rem(16px) 0 rem(12px);
 }

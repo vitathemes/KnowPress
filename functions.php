@@ -106,8 +106,8 @@ if ( ! function_exists( 'knowpress_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
+				'height'      => 50,
+				'width'       => 200,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)

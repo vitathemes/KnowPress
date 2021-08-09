@@ -299,7 +299,7 @@ if ( function_exists( 'kirki' ) ) {
 						'font-family'    => 'Inter',
 						'font-size'      => '29px',
 						'font-weight'    => '600',
-						'line-height'    => '1.5',
+						'line-height'    => '1.4',
 						'letter-spacing' => '0',
 					],
 					'choices'         => [
@@ -349,7 +349,7 @@ if ( function_exists( 'kirki' ) ) {
 						'font-family'    => 'Inter',
 						'font-size'      => '23px',
 						'font-weight'    => '600',
-						'line-height'    => '1.5',
+						'line-height'    => '1.35',
 						'letter-spacing' => '0',
 					],
 					'choices'         => [
@@ -399,7 +399,7 @@ if ( function_exists( 'kirki' ) ) {
 						'font-family'    => 'Inter',
 						'font-size'      => '20px',
 						'font-weight'    => '600',
-						'line-height'    => '1.5',
+						'line-height'    => '1.35',
 						'letter-spacing' => '0',
 					],
 					'choices'         => [
@@ -449,7 +449,7 @@ if ( function_exists( 'kirki' ) ) {
 						'font-family'    => 'Inter',
 						'font-size'      => '18px',
 						'font-weight'    => '600',
-						'line-height'    => '1.5',
+						'line-height'    => '1.4',
 						'letter-spacing' => '0',
 					],
 					'choices'         => [
@@ -499,7 +499,7 @@ if ( function_exists( 'kirki' ) ) {
 						'font-family'    => 'Inter',
 						'font-size'      => '16px',
 						'font-weight'    => '600',
-						'line-height'    => '1.5',
+						'line-height'    => '1.4',
 						'letter-spacing' => '0',
 					],
 					'choices'         => [

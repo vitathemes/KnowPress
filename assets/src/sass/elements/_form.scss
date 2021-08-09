@@ -7,6 +7,7 @@ input, textarea {
   border-radius: rem(4px);
   transition: $knowpress_global_transition;
   border: 1px solid $knowpress_border_color;
+  max-width: 100%;
 }
 
 button, [type="submit"] {

@@ -16,12 +16,12 @@
     background-color: transparent;
     display: block;
     width: 28%;
-    padding: rem(32px 24px 40px 24px);
+    padding: rem(0 24px 40px 24px);
   }
 
   @include mq(wide) {
     width: 22%;
-    padding: rem(32px 0px 40px 38px);
+    padding: rem(0 0px 40px 38px);
   }
 }
 
