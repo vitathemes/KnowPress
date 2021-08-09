@@ -13,6 +13,15 @@
 .block-editor-block-preview__container {
   min-height: 45px; }
 
+.editor-styles-wrapper p {
+  line-height: 1.4; }
+
+.editor-styles-wrapper ol li, .editor-styles-wrapper ul li {
+  margin-bottom: 10px; }
+
+.editor-styles-wrapper ol ul, .editor-styles-wrapper ol ol, .editor-styles-wrapper ul ul, .editor-styles-wrapper ul ol {
+  margin-top: 10px; }
+
 .block-editor-block-styles__item-preview .block-editor-block-preview__container .is-root-container p.is-style-message {
   padding: 4px;
   background-color: var(--knowpress-message-bg-color);
@@ -69,7 +78,7 @@ ul.is-style-two-col, ol.is-style-two-col {
   flex-wrap: wrap; }
   @media screen and (min-width: 567px) {
     ul.is-style-two-col, ol.is-style-two-col {
-      padding: 30px 30px 18px 30px; } }
+      padding: 30px 30px 18px 40px; } }
   ul.is-style-two-col li, ol.is-style-two-col li {
     width: calc(50% - 10px);
     padding-right: 10px;

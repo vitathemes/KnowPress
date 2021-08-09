@@ -1,0 +1,28 @@
+.c-pagination {
+  margin-top: rem(48px);
+
+  @include mq(tablet) {
+    margin-top: rem(64px);
+  }
+}
+
+.s-pagination, .post-navigation {
+
+  .nav-links {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-previous, .nav-next {
+    margin-top: rem(12px);
+  }
+}
+
+.c-post__content .page-links {
+
+  .post-page-numbers {
+    margin-left: rem(6px);
+    padding: 4px;
+  }
+}

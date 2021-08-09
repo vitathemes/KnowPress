@@ -172,8 +172,8 @@ add_action( 'enqueue_block_editor_assets', 'knowpress_editor_fonts' );
 // Add Typography styles in editor
 if ( ! function_exists( 'knowpress_editor_typography' ) ) {
 	function knowpress_editor_typography() {
-
-		if ( ! function_exists( 'kirki' ) ) { ?>
+		$base_font = get_theme_mod( 'text_typography', array() );
+		if ( ! function_exists( 'kirki' ) || empty($base_font) ) { ?>
             <style>
                 .editor-styles-wrapper {
                     font-family: 'Inter' !important;
@@ -215,7 +215,7 @@ if ( ! function_exists( 'knowpress_editor_typography' ) ) {
 			return;
 		}
 
-		$base_font = get_theme_mod( 'text_typography', array() );
+
 		$h1_font   = get_theme_mod( 'typography_h1', array() );
 		$h2_font   = get_theme_mod( 'typography_h2', array() );
 		$h3_font   = get_theme_mod( 'typography_h3', array() );
@@ -223,12 +223,15 @@ if ( ! function_exists( 'knowpress_editor_typography' ) ) {
 		$h5_font   = get_theme_mod( 'typography_h5', array() );
 		$h6_font   = get_theme_mod( 'typography_h6', array() );
 
-		if (empty($base_font)) {
-		    return;
-		}
 		?>
         <style>
             .editor-styles-wrapper {
+                font-family: '<?php echo esc_html($base_font['font-family']) ?>' !important;
+                font-weight: <?php echo esc_html($base_font['variant']) ?> !important;
+                font-size: <?php echo esc_html($base_font['font-size']) ?> !important;
+            }
+
+            .editor-styles-wrapper p {
                 font-family: '<?php echo esc_html($base_font['font-family']) ?>' !important;
                 font-weight: <?php echo esc_html($base_font['variant']) ?> !important;
                 font-size: <?php echo esc_html($base_font['font-size']) ?> !important;

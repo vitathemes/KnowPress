@@ -32,7 +32,9 @@
 
 	<?php knowpress_post_thumbnail(); ?>
 
-    <div class="c-post__content<?php if ( ! is_singular() ) { echo "c-post__content--excerpt"; } ?>">
+    <div class="c-post__content<?php if ( ! is_singular() ) {
+		echo " c-post__content--excerpt";
+	} ?>">
 		<?php
 		if ( is_singular() ) {
 			the_content();
@@ -48,9 +50,9 @@
 		);
 		?>
     </div><!-- .entry-content -->
-<?php if ( is_singular() ) : ?>
-    <footer class="c-post__footer s-post-meta s-post-meta--footer">
-		<?php knowpress_entry_footer(); ?>
-    </footer><!-- .entry-footer -->
-    <?php endif; ?>
+	<?php if ( is_singular() ) : ?>
+        <footer class="c-post__footer s-post-meta s-post-meta--footer">
+			<?php knowpress_entry_footer(); ?>
+        </footer><!-- .entry-footer -->
+	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

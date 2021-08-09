@@ -8,6 +8,7 @@
 
 .c-post__title {
   margin: 0 0 rem(8px);
+  word-break: break-all;
 }
 
 .c-post__title__link {
@@ -40,6 +41,14 @@
   margin-top: rem(12px);
 }
 
+.c-post__content * {
+  word-break: break-all;
+}
+
+pre {
+  white-space: pre-line;
+}
+
 .c-post__content--excerpt {
 
   p {
@@ -51,6 +60,7 @@
   margin-top: rem(32px);
   display: flex;
   flex-direction: column;
+  clear: both;
 }
 
 .c-post__footer__cat-links {

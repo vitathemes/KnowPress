@@ -119,15 +119,12 @@ add_action( 'after_setup_theme', 'knowpress_setup' );
 /**
  * Registers an editor stylesheet for the theme.
  */
-function knowpress_add_editor_styles() {
-	add_editor_style( get_template_directory_uri() . '/assets/css/editor-style.css' );
-}
-
-add_action( 'after_setup_theme', 'knowpress_add_editor_styles' );
-
 add_action( 'enqueue_block_editor_assets',
 	function () {
-		wp_enqueue_style( 'knowpress-editor-styles', get_template_directory_uri() . '/assets/css/editor-style.css', false, wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'knowpress-editor-styles',
+			get_template_directory_uri() . '/assets/css/editor-style.css',
+			false,
+			wp_get_theme()->get( 'Version' ) );
 	} );
 
 /**
@@ -180,7 +177,9 @@ add_action( 'widgets_init', 'knowpress_widgets_init' );
  */
 function knowpress_scripts() {
 	wp_enqueue_style( 'knowpress-style',
-		get_template_directory_uri() . '/assets/css/style.css', array(), KNWOPRESS_VERSION );
+		get_template_directory_uri() . '/assets/css/style.css',
+		array(),
+		KNWOPRESS_VERSION );
 	wp_style_add_data( 'knowpress-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'knowpress-scripts-vendor',

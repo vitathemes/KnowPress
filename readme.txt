@@ -18,6 +18,7 @@ KnowPress is a fast and minimal theme for documentation sites.
 * Compatible with [WeDocs](https://wordpress.org/plugins/wedocs/)
 * No additional JS
 * Sass for stylesheets
+* Compatible with [Contact Form 7](https://wordpress.org/plugins/contact-form-7)
 * Fast & lightweight (Google Speed (PageSpeed Insights): 100/100)
 * Theme options built directly into WordPress native live theme customizer
 * Responsive design

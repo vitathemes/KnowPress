@@ -34,9 +34,11 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-
-			the_posts_navigation();
-
+?>
+	    <div class="c-pagination s-pagination">
+            <?php the_posts_navigation(); ?>
+        </div>
+<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
