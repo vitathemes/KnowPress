@@ -33,12 +33,12 @@
 	if ( $children ) {
 		if ( ! get_theme_mod( 'show_sidebar_all_pages', false ) ) :
 			?>
-            <h4 class="c-docs-nav__title"><?php echo get_post_field( 'post_title', $parent, 'display' ); ?></h4>
+            <h4 class="c-docs-nav__title"><?php echo esc_html(get_post_field( 'post_title', $parent, 'display' )); ?></h4>
 		<?php
 		endif;
 		?>
         <ul class="c-docs-nav__list s-docs-nav-list">
-			<?php echo $children; ?>
+			<?php echo $children; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
         </ul>
 	<?php } ?>
 </div>

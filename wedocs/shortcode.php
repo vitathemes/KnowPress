@@ -1,23 +1,23 @@
 <?php if ( $docs ) { ?>
 
 <div class="wedocs-shortcode-wrap c-docs-grid">
-    <ul class="wedocs-docs-list col-<?php echo $col; ?>">
+    <ul class="wedocs-docs-list col-<?php echo esc_attr($col); ?>">
 
         <?php foreach ( $docs as $main_doc ) { ?>
             <li class="wedocs-docs-single c-card">
-                <h2 class="c-card__title"><?php echo $main_doc['doc']->post_title; ?></h2>
-                <a class="c-card__link" href="<?php echo get_permalink( $main_doc['doc']->ID ); ?>" aria-label="<?php echo $main_doc['doc']->post_title; ?>"></a>
+                <h2 class="c-card__title"><?php echo esc_html($main_doc['doc']->post_title); ?></h2>
+                <a class="c-card__link" href="<?php echo esc_url(get_permalink( $main_doc['doc']->ID )); ?>" aria-label="<?php echo esc_attr($main_doc['doc']->post_title); ?>"></a>
 	            <?php if ( $main_doc['doc']->post_content != "" ) { ?>
 
                     <div class="c-card__main s-card-main">
-			            <?php echo $main_doc['doc']->post_content; ?>
+			            <p><?php echo esc_html($main_doc['doc']->post_content); ?></p>
                     </div>
 
 	            <?php } else if ( $main_doc['sections'] ) { ?>
                     <div class="c-card__main c-card__main--has-link s-card-main">
                         <ul class="c-card__list wedocs-doc-sections">
                             <?php foreach ( $main_doc['sections'] as $section ) { ?>
-                                <li><a href="<?php echo get_permalink( $section->ID ); ?>"><?php echo $section->post_title; ?></a></li>
+                                <li><a href="<?php echo esc_url(get_permalink( $section->ID )); ?>"><?php echo esc_html($section->post_title); ?></a></li>
                             <?php } ?>
                         </ul>
                     </div>

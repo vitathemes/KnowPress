@@ -20,7 +20,7 @@ get_header();
 
 			<div class="page-content">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'knowpress' ); ?>
-                <a href="<?php echo home_url(); ?>"><?php esc_html_e('Back to home', 'knowpress'); ?></a>
+                <a href="<?php echo esc_url(home_url()); ?>"><?php esc_html_e('Back to home', 'knowpress'); ?></a>
                 </p>
 
 					<?php

@@ -2,19 +2,19 @@
 
 <div class="c-feedback s-feedback">
     <div class="wedocs-feedback-wrap wedocs-hide-print">
-        <time itemprop="dateModified" datetime="<?php echo esc_attr( get_the_modified_date( 'c' ) ); ?>"><?php printf( __( 'Updated on %s',
-				'knowpress' ),
-				get_the_modified_date() ); ?></time>
+        <?php /* translators: Modified date */ ?>
+        <time itemprop="dateModified" datetime="<?php echo esc_attr( get_the_modified_date( 'c' ) ); ?>"><?php printf( esc_html__( 'Updated on %s', 'knowpress' ), esc_html(get_the_modified_date()) ); ?></time>
         <div class="c-feedback__main">
 			<?php
 			$positive = (int) get_post_meta( $post->ID, 'positive', true );
 			$negative = (int) get_post_meta( $post->ID, 'negative', true );
-
+			/* translators: Number of persons who found this article useful */
 			$positive_title = $positive ? sprintf( _n( '%d person found this useful',
 				'%d persons found this useful',
 				$positive,
 				'knowpress' ),
 				number_format_i18n( $positive ) ) : __( 'No votes yet', 'knowpress' );
+			/* translators: Number of persons who found this article not useful */
 			$negative_title = $negative ? sprintf( _n( '%d person found this not useful',
 				'%d persons found this not useful',
 				$negative,
@@ -22,7 +22,7 @@
 				number_format_i18n( $negative ) ) : __( 'No votes yet', 'knowpress' );
 			?>
 
-			<p><?php _e( 'Was this article helpful to you?', 'knowpress' ); ?></p>
+			<p><?php esc_html_e( 'Was this article helpful to you?', 'knowpress' ); ?></p>
 
             <span class="vote-link-wrap">
         <a href="#" class="wedocs-tip positive" data-id="<?php the_ID(); ?>" data-type="positive" title="<?php echo esc_attr( $positive_title ); ?>">
@@ -33,7 +33,7 @@
                 <path class="eye" d="M20.5 15C21.3284 15 22 14.3284 22 13.5C22 12.6716 21.3284 12 20.5 12C19.6716 12 19 12.6716 19 13.5C19 14.3284 19.6716 15 20.5 15Z" fill="#4D5A66"/>
             </svg>
             	        <?php if ( $positive ) { ?>
-                            <span class="count"><?php echo number_format_i18n( $positive ); ?></span>
+                            <span class="count"><?php echo esc_html( number_format_i18n( $positive ) ); ?></span>
 	                    <?php } ?>
         </a>
         <a href="#" class="wedocs-tip negative" data-id="<?php the_ID(); ?>" data-type="negative" title="<?php echo esc_attr( $negative_title ); ?>">
@@ -46,7 +46,7 @@
                 <path class="eye" d="M20.5 15C21.3284 15 22 14.3284 22 13.5C22 12.6716 21.3284 12 20.5 12C19.6716 12 19 12.6716 19 13.5C19 14.3284 19.6716 15 20.5 15Z" fill="#4D5A66"/>
             </svg>
             	        <?php if ( $negative ) { ?>
-                            <span class="count"><?php echo number_format_i18n( $negative ); ?></span>
+                            <span class="count"><?php echo esc_html( number_format_i18n( $negative ) ); ?></span>
 	                    <?php } ?>
         </a>
     </span>

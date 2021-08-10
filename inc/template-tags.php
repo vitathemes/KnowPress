@@ -75,10 +75,12 @@ if ( ! function_exists( 'knowpress_entry_footer' ) ) :
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
 				if ( get_theme_mod( 'archive_categories', true ) && is_archive() || get_theme_mod( 'archive_categories', true ) && is_home() ) {
+					/* translators: 1: Categories list */
 					printf( '<span class="c-post__footer__cat-links">' . esc_html__( 'Posted in %1$s', 'knowpress' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 
 				if ( get_theme_mod( 'single_categories', true ) && is_single() ) {
+					/* translators: 1: Categories list */
 					printf( '<span class="c-post__footer__cat-links">' . esc_html__( 'Posted in %1$s', 'knowpress' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
@@ -87,8 +89,8 @@ if ( ! function_exists( 'knowpress_entry_footer' ) ) :
 				/* translators: used between list items, there is a space after the comma */
 				$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'knowpress' ) );
 				if ( $tags_list ) {
-					/* translators: 1: list of tags. */
 					if ( get_theme_mod( 'single_tags', true ) ) {
+						/* translators: 1: list of tags. */
 						printf( '<span class="c-post__footer__tags-links">' . esc_html__( 'Tagged %1$s', 'knowpress' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					}
 				}
@@ -185,7 +187,7 @@ if ( ! function_exists( 'knowpress_header_image' ) ) :
 				esc_url( get_header_image() ),
 				esc_attr( get_custom_header()->height ),
 				esc_attr( get_custom_header()->width ),
-				esc_attr__( 'Header Image', '_s' ) );
+				esc_attr__( 'Header Image', 'knowpress' ) );
 		}
 	}
 endif;

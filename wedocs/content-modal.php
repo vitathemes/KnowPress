@@ -11,7 +11,7 @@ if ( is_user_logged_in() ) {
 <div class="wedocs-modal-backdrop" id="wedocs-modal-backdrop"></div>
 <div id="wedocs-contact-modal" class="wedocs-contact-modal wedocs-hide-print">
     <div class="wedocs-modal-header">
-        <h1><?php _e( 'How can we help?', 'knowpress' ); ?></h1>
+        <h1><?php esc_html_e( 'How can we help?', 'knowpress' ); ?></h1>
         <a href="#" id="wedocs-modal-close" class="wedocs-modal-close"><i class="wedocs-icon wedocs-icon-times"></i></a>
     </div>
 
@@ -19,23 +19,23 @@ if ( is_user_logged_in() ) {
         <div id="wedocs-modal-errors"></div>
         <form id="wedocs-contact-modal-form" action="" method="post">
             <div class="wedocs-form-row">
-                <label for="name"><?php _e( 'Name', 'knowpress' ); ?></label>
+                <label for="name"><?php esc_html_e( 'Name', 'knowpress' ); ?></label>
 
                 <div class="wedocs-form-field">
-                    <input type="text" name="name" id="name" placeholder="" value="<?php echo $name; ?>" required />
+                    <input type="text" name="name" id="name" placeholder="" value="<?php echo esc_attr($name); ?>" required />
                 </div>
             </div>
 
             <div class="wedocs-form-row">
-                <label for="name"><?php _e( 'Email', 'knowpress' ); ?></label>
+                <label for="name"><?php esc_html_e( 'Email', 'knowpress' ); ?></label>
 
                 <div class="wedocs-form-field">
-                    <input type="email" name="email" id="email" placeholder="you@example.com" value="<?php echo $email; ?>" <?php disabled( is_user_logged_in() ); ?> required />
+                    <input type="email" name="email" id="email" placeholder="you@example.com" value="<?php echo esc_attr($email); ?>" <?php disabled( is_user_logged_in() ); ?> required />
                 </div>
             </div>
 
             <div class="wedocs-form-row">
-                <label for="name"><?php _e( 'subject', 'knowpress' ); ?></label>
+                <label for="name"><?php esc_html_e( 'subject', 'knowpress' ); ?></label>
 
                 <div class="wedocs-form-field">
                     <input type="text" name="subject" id="subject" placeholder="" value="" required />
@@ -43,7 +43,7 @@ if ( is_user_logged_in() ) {
             </div>
 
             <div class="wedocs-form-row">
-                <label for="name"><?php _e( 'message', 'knowpress' ); ?></label>
+                <label for="name"><?php esc_html_e( 'message', 'knowpress' ); ?></label>
 
                 <div class="wedocs-form-field">
                     <textarea type="message" name="message" id="message" required></textarea>

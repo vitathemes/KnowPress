@@ -43,7 +43,7 @@ endif;
     <div class="c-brandind-wrapper js-branding">
 	<?php knowpress_branding(); ?>
     </div>
-	<?php  if ( ! $skip_sidebar && ! is_404() ) {
+	<?php  if ( $skip_sidebar && ! is_404() && function_exists('wedocs_get_template_part') ) {
 		wedocs_get_template_part( 'docs', 'sidebar' );
 	}   ?>
 </aside>

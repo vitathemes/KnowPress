@@ -53,9 +53,9 @@ do_action( 'wedocs_before_main_content' );
 
 					if ( $children ) {
 						echo '<div class="c-child-articles article-child well">';
-						echo '<h4 class="c-child-articles__title">' . __( 'Articles', 'knowpress' ) . '</h4>';
+						echo '<h4 class="c-child-articles__title">' . esc_html__( 'Articles', 'knowpress' ) . '</h4>';
 						echo '<ul class="c-child-articles__list s-child-articles-list">';
-						echo $children;
+						echo $children; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						echo '</ul>';
 						echo '</div>';
 					}
@@ -64,8 +64,8 @@ do_action( 'wedocs_before_main_content' );
 
 					if ( $tags_list ) {
 						printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-							_x( 'Tags', 'Used before tag names.', 'knowpress' ),
-							$tags_list
+							esc_attr_x( 'Tags', 'Used before tag names.', 'knowpress' ),
+							$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						);
 					}
 					?>
@@ -76,18 +76,18 @@ do_action( 'wedocs_before_main_content' );
                         <span class="wedocs-help-link wedocs-hide-print wedocs-hide-mobile">
                                 <i class="wedocs-icon wedocs-icon-envelope"></i>
                                 <?php printf( '%s <a class="c-doc__footer__link" id="wedocs-stuck-modal" href="%s">%s</a>',
-	                                __( 'Still stuck?', 'knowpress' ),
+	                                esc_html__( 'Still stuck?', 'knowpress' ),
 	                                '#',
-	                                __( 'How can we help?', 'knowpress' ) ); ?>
+	                                esc_html__( 'How can we help?', 'knowpress' ) ); ?>
                             </span>
 					<?php } ?>
 
                     <div class="wedocs-article-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <meta itemprop="name" content="<?php echo get_the_author(); ?>"/>
-                        <meta itemprop="url" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"/>
+                        <meta itemprop="url" content="<?php echo esc_attr(get_author_posts_url( get_the_author_meta( 'ID' ) )); ?>"/>
                     </div>
 
-                    <meta itemprop="datePublished" content="<?php echo get_the_time( 'c' ); ?>"/>
+                    <meta itemprop="datePublished" content="<?php echo esc_attr(get_the_time( 'c' )); ?>"/>
                 </footer>
 
 				<div class="c-post-nav s-post-nav">

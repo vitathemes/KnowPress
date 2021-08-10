@@ -85,8 +85,16 @@ if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<?php
 		if ( ! function_exists( 'kirki' ) ) {
-			echo '<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">';
-			echo '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">';
+			wp_enqueue_style( 'knowpress-editor-google-font',
+				 'https://fonts.googleapis.com/css2?family=Inter&display=swap',
+				false,
+				wp_get_theme()->get( 'Version' ) );
+
+			wp_enqueue_style( 'knowpress-editor-google-font-inter',
+				'https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap',
+				false,
+				wp_get_theme()->get( 'Version' ) );
+
 			return;
 		}
 
@@ -100,26 +108,44 @@ if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
 
 		if (!empty($base_font)) {
 			if ( $base_font['variant'] == 400 || $base_font['variant'] == 'regular' ) {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $base_font['font-family'] . '&display=swap" rel="stylesheet">';
+				wp_enqueue_style( 'knowpress-editor-google-font-base',
+					'https://fonts.googleapis.com/css2?family=' . $base_font['font-family'] . '&display=swap',
+					false,
+					wp_get_theme()->get( 'Version' ) );
 			} else {
-				echo '<link href="https://fonts.googleapis.com/css2?family=' . $base_font['font-family'] . ':wght@' . $base_font['variant'] . '&display=swap" rel="stylesheet">';
+				wp_enqueue_style( 'knowpress-editor-google-font-base',
+					'https://fonts.googleapis.com/css2?family='  . $base_font['font-family'] . ':wght@' . $base_font['variant'] . '&display=swap',
+					false,
+					wp_get_theme()->get( 'Version' ) );
 			}
 		}
 
 		if (!empty($h1_font)) {
             if ( $h1_font['variant'] == 400 || $h1_font['variant'] == 'regular' ) {
-                echo '<link href="https://fonts.googleapis.com/css2?family=' . $h1_font['font-family'] . '&display=swap" rel="stylesheet">';
+	            wp_enqueue_style( 'knowpress-editor-google-font-base',
+		            'https://fonts.googleapis.com/css2?family=' . $h1_font['font-family'] . '&display=swap',
+		            false,
+		            wp_get_theme()->get( 'Version' ) );
             } else {
-                echo '<link href="https://fonts.googleapis.com/css2?family=' . $h1_font['font-family'] . ':wght@' . $h1_font['variant'] . '&display=swap" rel="stylesheet">';
+	            wp_enqueue_style( 'knowpress-editor-google-font-base',
+		            'https://fonts.googleapis.com/css2?family='  . $h1_font['font-family'] . ':wght@' . $h1_font['variant'] . '&display=swap',
+		            false,
+		            wp_get_theme()->get( 'Version' ) );
             }
 		}
 
 		if (!empty($h2_font)) {
             if ( $h2_font['variant'] != $h1_font['variant'] && $h2_font['font-family'] != $h1_font['font-family'] ) {
                 if ( $h2_font['variant'] == 400 || $h2_font['variant'] == 'regular' ) {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h2_font['font-family'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family=' . $h2_font['font-family'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 } else {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h2_font['font-family'] . ':wght@' . $h2_font['variant'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family='  . $h2_font['font-family'] . ':wght@' . $h2_font['variant'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 }
             }
 		}
@@ -127,9 +153,15 @@ if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
 		if (!empty($h3_font)) {
             if ( $h3_font['variant'] != $h1_font['variant'] && $h3_font['font-family'] != $h1_font['font-family'] || $h3_font['variant'] != $h2_font['variant'] && $h3_font['font-family'] != $h2_font['font-family'] ) {
                 if ( $h3_font['variant'] == 400 || $h3_font['variant'] == 'regular' ) {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h3_font['font-family'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family=' . $h3_font['font-family'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 } else {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h3_font['font-family'] . ':wght@' . $h3_font['variant'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family='  . $h3_font['font-family'] . ':wght@' . $h3_font['variant'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 }
             }
 		}
@@ -137,9 +169,15 @@ if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
 		if (!empty($h4_font)) {
             if ( $h4_font['variant'] != $h1_font['variant'] && $h4_font['font-family'] != $h1_font['font-family'] || $h4_font['variant'] != $h2_font['variant'] && $h4_font['font-family'] != $h2_font['font-family'] || $h4_font['variant'] != $h3_font['variant'] && $h4_font['font-family'] != $h3_font['font-family'] ) {
                 if ( $h4_font['variant'] == 400 || $h4_font['variant'] == 'regular' ) {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h4_font['font-family'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family=' . $h4_font['font-family'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 } else {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h4_font['font-family'] . ':wght@' . $h4_font['variant'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family='  . $h4_font['font-family'] . ':wght@' . $h4_font['variant'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 }
             }
 		}
@@ -147,9 +185,15 @@ if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
 		if (!empty($h5_font)) {
             if ( $h5_font['variant'] != $h1_font['variant'] && $h5_font['font-family'] != $h1_font['font-family'] || $h5_font['variant'] != $h2_font['variant'] && $h5_font['font-family'] != $h2_font['font-family'] || $h5_font['variant'] != $h3_font['variant'] && $h5_font['font-family'] != $h3_font['font-family'] || $h5_font['variant'] != $h4_font['variant'] && $h5_font['font-family'] != $h4_font['font-family'] ) {
                 if ( $h5_font['variant'] == 400 || $h5_font['variant'] == 'regular' ) {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h5_font['font-family'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family=' . $h5_font['font-family'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 } else {
-                    echo '<link href="https://fonts.googleapis.com/css2?family=' . $h5_font['font-family'] . ':wght@' . $h4_font['variant'] . '&display=swap" rel="stylesheet">';
+	                wp_enqueue_style( 'knowpress-editor-google-font-base',
+		                'https://fonts.googleapis.com/css2?family='  . $h5_font['font-family'] . ':wght@' . $h5_font['variant'] . '&display=swap',
+		                false,
+		                wp_get_theme()->get( 'Version' ) );
                 }
             }
 		}
@@ -157,9 +201,15 @@ if ( ! function_exists( 'knowpress_editor_fonts' ) ) {
 		if (!empty($h6_font)) {
 			if ( $h6_font['variant'] != $h1_font['variant'] && $h6_font['font-family'] != $h1_font['font-family'] || $h6_font['variant'] != $h2_font['variant'] && $h6_font['font-family'] != $h2_font['font-family'] || $h6_font['variant'] != $h3_font['variant'] && $h6_font['font-family'] != $h3_font['font-family'] || $h6_font['variant'] != $h4_font['variant'] && $h6_font['font-family'] != $h4_font['font-family'] || $h6_font['variant'] != $h4_font['variant'] && $h6_font['font-family'] != $h4_font['font-family'] || $h6_font['variant'] != $h5_font['variant'] && $h6_font['font-family'] != $h5_font['font-family'] ) {
 				if ( $h6_font['variant'] == 400 || $h6_font['variant'] == 'regular' ) {
-					echo '<link href="https://fonts.googleapis.com/css2?family=' . $h6_font['font-family'] . '&display=swap" rel="stylesheet">';
+					wp_enqueue_style( 'knowpress-editor-google-font-base',
+						'https://fonts.googleapis.com/css2?family=' . $h6_font['font-family'] . '&display=swap',
+						false,
+						wp_get_theme()->get( 'Version' ) );
 				} else {
-					echo '<link href="https://fonts.googleapis.com/css2?family=' . $h6_font['font-family'] . ':wght@' . $h6_font['variant'] . '&display=swap" rel="stylesheet">';
+					wp_enqueue_style( 'knowpress-editor-google-font-base',
+						'https://fonts.googleapis.com/css2?family='  . $h6_font['font-family'] . ':wght@' . $h6_font['variant'] . '&display=swap',
+						false,
+						wp_get_theme()->get( 'Version' ) );
 				}
 			}
 		}
@@ -278,32 +328,10 @@ if ( ! function_exists( 'knowpress_editor_typography' ) ) {
 }
 add_action( 'enqueue_block_editor_assets', 'knowpress_editor_typography' );
 
-
-// Blocks Styles
-add_action( 'init',
+add_action( 'enqueue_block_editor_assets',
 	function () {
-		register_block_style( 'core/paragraph',
-			[
-				'name'  => 'message',
-				'label' => __( 'Message', 'knowpress' ),
-			] );
-
-		register_block_style( 'core/paragraph',
-			[
-				'name'  => 'message-warning',
-				'label' => __( 'Warning', 'knowpress' ),
-			] );
-
-		register_block_style( 'core/paragraph',
-			[
-				'name'  => 'message-danger',
-				'label' => __( 'Danger', 'knowpress' ),
-			] );
-
-		register_block_style( 'core/list',
-			[
-				'name'  => 'two-col',
-				'label' => __( 'Two Column', 'knowpress' ),
-			] );
+		wp_enqueue_script( 'knowpress-editor-blocks-script',
+			get_template_directory_uri() . '/assets/js/editor-script.js',
+			false,
+			wp_get_theme()->get( 'Version' ) );
 	} );
-
