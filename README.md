@@ -1,7 +1,7 @@
 # KnowPress - [Demo](demo.vitathemes.com/knowpress) | [Download](https://wordpress.org/themes/knowpress/)
 KnowPress is a fast and minimal theme for documentation sites.
 
-![Home Page](screenshot.jpg)
+![Home Page](screenshot.png)
 
 ## Features
 * Compatible with [WeDocs](https://wordpress.org/plugins/wedocs/)

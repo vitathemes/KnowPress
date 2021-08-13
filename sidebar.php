@@ -17,7 +17,7 @@ if ( get_theme_mod('show_sidebar_all_pages', false) || class_exists('WeDocs') &&
             <button class="c-sidebar__close js-sidebar-close">
                 <svg class="c-sidebar__close__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.4em" height="1.4em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M224 128a8 8 0 0 1-8 8H59.313l58.344 58.343a8 8 0 0 1-11.314 11.314l-72-72a8 8 0 0 1 0-11.314l72-72a8 8 0 0 1 11.314 11.314L59.313 120H216a8 8 0 0 1 8 8z" /><rect x="0" y="0" width="256" height="256" fill="rgba(0, 0, 0, 0)" /></svg>
             </button>
-            <div class="c-brandind-wrapper js-branding">
+            <div class="c-branding-wrapper js-branding">
 		        <?php knowpress_branding(); ?>
             </div>
             <div class="c-sidebar__search">
@@ -40,8 +40,10 @@ endif;
     <button class="c-sidebar__close js-sidebar-close">
         <svg class="c-sidebar__close__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.4em" height="1.4em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M224 128a8 8 0 0 1-8 8H59.313l58.344 58.343a8 8 0 0 1-11.314 11.314l-72-72a8 8 0 0 1 0-11.314l72-72a8 8 0 0 1 11.314 11.314L59.313 120H216a8 8 0 0 1 8 8z" /><rect x="0" y="0" width="256" height="256" fill="rgba(0, 0, 0, 0)" /></svg>
     </button>
-    <div class="c-brandind-wrapper js-branding">
+    <div class="c-branding-wrapper js-branding">
 	<?php knowpress_branding(); ?>
+    </div>
+    <div class="c-sidebar__main js-sidebar-simplebar">
     </div>
 	<?php  if ( $skip_sidebar && ! is_404() && function_exists('wedocs_get_template_part') ) {
 		wedocs_get_template_part( 'docs', 'sidebar' );

@@ -1416,9 +1416,34 @@ ol.children {
   padding-top: 0.5rem; }
 
 .c-branding {
-  height: 5.4rem;
+  height: 2.5rem;
   display: flex;
   align-items: center; }
+  @media (min-width: 48em) {
+    .c-branding {
+      height: 5.4rem; } }
+  .c-branding .custom-logo-link, .c-branding .custom-logo-link img {
+    height: 2.5rem; }
+    @media (min-width: 48em) {
+      .c-branding .custom-logo-link, .c-branding .custom-logo-link img {
+        height: 4.0625rem; } }
+    @media (min-width: 64em) {
+      .c-branding .custom-logo-link, .c-branding .custom-logo-link img {
+        height: 5.4rem; } }
+  .c-branding .custom-logo-link {
+    display: flex;
+    align-items: center; }
+
+.c-branding-wrapper {
+  display: flex;
+  align-items: center;
+  height: 2.5rem; }
+  @media (min-width: 48em) {
+    .c-branding-wrapper {
+      height: 4.0625rem; } }
+  @media (min-width: 64em) {
+    .c-branding-wrapper {
+      height: 5.4rem; } }
 
 .s-branding .custom-logo {
   width: auto;
@@ -1714,6 +1739,9 @@ ol.children {
       stroke: var(--knowpress-primary-color); }
     .s-feedback a.wedocs-tip:hover svg .eye {
       fill: var(--knowpress-primary-color); }
+  .s-feedback a.wedocs-tip:focus {
+    background-color: transparent;
+    outline: 1px dashed #000; }
   .s-feedback a.wedocs-tip .count {
     position: absolute;
     background-color: var(--knowpress-primary-color);

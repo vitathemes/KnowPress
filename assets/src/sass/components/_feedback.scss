@@ -97,6 +97,11 @@
       }
     }
 
+    &:focus {
+      background-color: transparent;
+      outline: 1px dashed #000;
+    }
+
     .count {
       position: absolute;
       background-color: $knowpress_primary_color;
