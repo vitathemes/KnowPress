@@ -1,0 +1,39 @@
+h1 {
+  font-weight: 600;
+  font-size: rem(29px);
+  line-height: rem(43px);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: rem(23px);
+  line-height: rem(35px);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: rem(20px);
+  line-height: rem(32px);
+}
+
+h4 {
+  font-weight: 600;
+  font-size: rem(18px);
+  line-height: rem(28px);
+}
+
+h5 {
+  font-weight: 600;
+  font-size: rem(16px);
+  line-height: rem(24px);
+}
+
+h6 {
+  font-weight: 600;
+  font-size: rem(14px);
+  line-height: rem(21px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: break-all;
+}

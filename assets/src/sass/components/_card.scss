@@ -1,0 +1,91 @@
+.c-card {
+  padding: rem(16px);
+  border: 1px solid $knowpress_border_color;
+  position: relative;
+  transition: $knowpress_global_transition;
+
+  @include mq(tablet) {
+    padding: rem(20px) rem(20px) rem(16px);
+  }
+
+  &:hover, &:focus {
+    background-color: $knowpress_card_bg_color;
+    border-color: $knowpress_card_bg_color !important;
+  }
+}
+
+.c-card__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c-card__title {
+  font-weight: 600;
+  font-size: rem(16px);
+  line-height: rem(19px);
+  margin: 0;
+  color: $knowpress_primary_color;
+}
+
+.s-card-main {
+
+  p {
+    font-size: rem(14px);
+    line-height: rem(21px);
+    margin: rem(16px) 0;
+  }
+
+  ul.c-card__list {
+    margin: rem(16px) 0 !important;
+    padding-left: rem(16px) !important;
+  }
+
+  li {
+    margin-bottom: rem(4px) !important;
+
+    a {
+      color: $knowpress_primary_text_color;
+      text-decoration: none;
+      font-size: rem(14px);
+      line-height: rem(21px);
+
+      &:hover {
+        color: $knowpress_primary_color;
+      }
+    }
+  }
+}
+
+.c-card__main--has-link {
+  position: relative;
+  z-index: 2;
+}
+
+.c-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-card__arrow {
+  fill: $knowpress_primary_text_color;
+}
+
+.c-card__count {
+  font-weight: 600;
+  font-size: rem(12px);
+  line-height: rem(25px);
+  color: $knowpress_secondary_text_color;
+}
+
+.c-card__icon {
+  height: rem(25px);
+}
+
+.rtl .c-card__icon {
+  transform: rotate(180deg);
+}

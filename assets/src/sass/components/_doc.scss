@@ -1,0 +1,97 @@
+.c-docs {
+  position: relative;
+}
+
+.s-docs {
+  article a.wedocs-print-article {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #777;
+  }
+
+  article a.wedocs-print-article:hover {
+    color: #555;
+  }
+
+}
+
+.c-doc {
+
+}
+
+.c-doc__footer {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: rem(24px) 0;
+
+  @include mq(tablet) {
+    justify-content: space-between;
+    flex-direction: row;
+    padding: rem(32px) 0;
+  }
+}
+
+.c-doc__footer__link {
+  color: $knowpress_primary_color;
+  text-decoration: none;
+
+  &:hover {
+    color: $knowpress_secondary_text_color;
+  }
+}
+
+.c-doc__print {
+  color: $knowpress_secondary_text_color !important;
+  text-decoration: none;
+  font-size: rem(12px);
+  display: flex;
+  align-items: center;
+  background-color: $knowpress_card_bg_color;
+  padding: rem(6px);
+  border-radius: rem(4px);
+
+  @include mq(tablet) {
+    background-color: transparent;
+  }
+
+  span {
+    display: none;
+
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+
+  i {
+    font-size: 1.2rem;
+    @include mq(tablet) {
+      margin-right: rem(4px);
+    }
+  }
+
+  &:hover {
+    color: $knowpress_primary_color !important;
+  }
+}
+
+.c-docs-grid.wedocs-shortcode-wrap {
+
+  ul.wedocs-docs-list {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(desktop) {
+      display: block;
+    }
+
+    li.wedocs-docs-single {
+      width: 100%;
+      margin-right: 0;
+
+      @include mq(desktop) {
+        width: 48.5%;
+      }
+    }
+  }
+}

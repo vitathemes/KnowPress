@@ -1,0 +1,132 @@
+.c-feedback {
+
+}
+
+.c-feedback__main {
+  display: flex;
+  align-items: center;
+  margin-top: rem(20px);
+  justify-content: center;
+
+  @include mq(mobile) {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0 rem(12px) 0 0;
+  }
+}
+
+.s-feedback {
+
+  .wedocs-feedback-wrap {
+    padding: rem(16px);
+    border: 1px solid $knowpress_border_color;
+    margin: 0;
+    font-size: rem(13px);
+    flex-direction: column;
+
+    @include mq(mobile) {
+      flex-direction: row;
+    }
+
+    &::before, &::after {
+      content: unset !important;
+    }
+
+    @include mq(tablet) {
+      padding: rem(24px 20px);
+    }
+
+    @include mq(wide) {
+      padding: rem(36px 32px);
+      font-size: rem(16px);
+    }
+
+    .vote-link-wrap {
+      margin-top: 0;
+      display: flex;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: 359px) {
+      font-size: rem(14px);
+    }
+
+    @media screen and (min-width: 415px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .vote-link-wrap {
+    margin-left: 0;
+
+    @media screen and (min-width: 415px) {
+      margin-left: 10px;
+    }
+  }
+
+  a.wedocs-tip {
+    background-color: transparent;
+    border: none;
+    width: rem(32px);
+    height: rem(32px);
+    display: inline-block;
+    padding: 0;
+    position: relative;
+
+    svg, svg * {
+      transition: $knowpress_global_transition;
+    }
+
+    &:hover {
+      border: none;
+      background-color: transparent;
+
+      svg {
+        .shape {
+          stroke: $knowpress_primary_color;
+        }
+
+        .eye {
+          fill: $knowpress_primary_color;
+        }
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+      outline: 1px dashed #000;
+    }
+
+    .count {
+      position: absolute;
+      background-color: $knowpress_primary_color;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -100%;
+      border-radius: rem(4px);
+      padding: rem(2px) rem(8px);
+      margin: 0;
+      width: auto;
+      height: auto;
+      color: #fff;
+
+      &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid $knowpress_primary_color;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.c-docs-nav {
+
+}
+
+.s-docs-nav {
+
+}
+
+.c-docs-nav__title {
+  margin: 0 0 rem(24px);
+}
+
+.c-docs-nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: rem(215px);
+}
+
+.s-docs-nav-list {
+
+  & > li.current_page_item a {
+    color: $knowpress_secondary_text_color;
+  }
+
+  .item__header {
+    display: block;
+    width: 100%;
+    padding-right: 30px;
+    display: block;
+
+    a {
+      display: block;
+    }
+  }
+
+  & > li a:hover {
+    color: $knowpress_primary_color;
+  }
+
+  li {
+    background-color: $knowpress_sidebar_color;
+    font-weight: 600;
+    font-size: rem(14px);
+    line-height: rem(17px);
+    margin-bottom: rem(24px);
+    position: relative;
+
+    &.current_page_ancestor {
+
+      ul {
+        display: block;
+      }
+    }
+
+    a {
+      color: $knowpress_primary_text_color;
+      text-decoration: none;
+      margin-right: rem(8px);
+      border-radius: 4px;
+      padding: rem(8px) 0;
+    }
+
+    button {
+      padding: 0;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+
+      &.is-active {
+        span {
+          transform-origin: center center;
+          transform: rotate(180deg);
+        }
+      }
+
+      span {
+        transition: $knowpress_global_transition;
+      }
+
+      &:hover {
+        background-color: $knowpress_primary_color;
+
+        span {
+          border-top-color: #fff;
+        }
+      }
+    }
+  }
+
+  ul > li > .item__header button:hover {
+    &  > .o-arrow {
+      border-top-color: #fff !important;
+    }
+  }
+
+  ul.children li {
+    button {
+      padding: 0;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+
+      &:hover {
+        background-color: $knowpress_primary_color;
+
+        span {
+          border-top-color: #fff;
+        }
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: rem(12px) 0 0;
+    list-style: none;
+  }
+
+  ul.children {
+    display: none;
+
+    ul.children {
+      padding-left: rem(8px);
+      margin-bottom: rem(16px);
+    }
+  }
+
+  ul li {
+    font-weight: normal;
+    margin: 0 0 rem(4px);
+
+    &.current_page_item > a {
+      background-color: $knowpress_border_color;
+    }
+
+    a {
+      padding: rem(8px 22px 8px 16px);
+      display: block;
+
+      &:hover {
+        background-color: $knowpress_primary_color;
+        color: #fff;
+      }
+    }
+  }
+}

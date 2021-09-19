@@ -1,0 +1,133 @@
+.c-sidebar {
+  position: absolute;
+  height: 100vh;
+  padding: 0 0 rem(24px) 0;
+  width: 80%;
+  left: -100%;
+  top: 0;
+  max-width: rem(400px);
+  background-color: $knowpress_sidebar_color;
+  z-index: 5;
+  display: none;
+
+  @include mq(desktop) {
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    display: block;
+    width: 28%;
+    padding: rem(0 24px 40px 24px);
+  }
+
+  @include mq(wide) {
+    width: 22%;
+    padding: rem(0 0px 40px 38px);
+  }
+}
+
+.admin-bar {
+  .c-sidebar {
+    top: 32px;
+  }
+}
+
+.c-branding--documentation {
+  display: none;
+  position: fixed;
+  background: linear-gradient(270deg, rgba(245, 247, 249, 0.85) 0%, rgba(245, 247, 249, 0) 12.73%), #FFFFFF;
+  background-color: $knowpress_sidebar_color !important;
+  left: -100%;
+  top: 0;
+
+  @include mq(desktop) {
+    left: 0;
+    display: block;
+  }
+}
+
+.c-sidebar__close {
+  margin-top: 24px;
+  position: initial;
+  top: rem(-24px);
+  background-color: transparent;
+  padding: 0;
+  width: rem(24px);
+  height: rem(24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: rem(20px);
+
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.c-sidebar__close__icon {
+  fill: $knowpress_primary_text_color;
+}
+
+.rtl {
+  .c-sidebar__close__icon {
+    transform: rotate(180deg) !important;
+  }
+}
+
+.c-sidebar__docs {
+  margin-top: rem(16px);
+  padding: 0 0 0 rem(32px);
+  border-bottom: 1px solid $knowpress_border_color;
+
+  @include mq(desktop) {
+    padding: 0;
+    margin-top: rem(32px);
+    border-bottom: 0;
+  }
+}
+
+.c-sidebar__search {
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+  }
+}
+
+.c-sidebar {
+  .simplebar-scrollbar::before {
+    width: rem(6px) !important;
+    background-color: $knowpress_border_color !important;
+  }
+
+  .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1 !important;
+  }
+}
+
+.c-sidebar__main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-right: rem(28px);
+  padding-bottom: 80px;
+
+  @include mq(desktop) {
+    padding-right: rem(8px);
+    margin-top: rem(64px);
+    padding-bottom: 96px;
+  }
+
+  @include mq(wide) {
+    padding-right: rem(48px);
+  }
+}
+
+.c-sidebar__credit {
+  margin-top: auto;
+  font-size: rem(12px);
+  padding-top: rem(8px);
+}

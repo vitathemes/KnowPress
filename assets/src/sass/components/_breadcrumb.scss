@@ -1,0 +1,39 @@
+.c-breadcrumb {
+  @include mq(desktop) {
+    padding-right: rem(64px);
+  }
+}
+
+.s-breadcrumb ol.wedocs-breadcrumb {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: rem(36px);
+  margin-bottom: rem(30px);
+  margin-top: 0;
+
+  @include mq(desktop) {
+    padding-right: 0;
+  }
+}
+.s-breadcrumb ol.wedocs-breadcrumb li {
+  display: inline;
+  font-size: rem(14px);
+  line-height: rem(25px);
+
+  span.current {
+    color: $knowpress_secondary_text_color;
+  }
+}
+.s-breadcrumb ol.wedocs-breadcrumb li.delimiter {
+  color: $knowpress_primary_text_color;
+  margin: 0 2px;
+}
+.s-breadcrumb ol.wedocs-breadcrumb a {
+  text-decoration: none;
+  color: $knowpress_primary_text_color;
+
+  &:hover {
+    color: $knowpress_primary_color;
+  }
+}

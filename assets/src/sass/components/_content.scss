@@ -1,0 +1,10 @@
+.s-content {
+
+  a {
+    color: $knowpress_primary_color;
+
+    &:hover {
+      color: $knowpress_secondary_text_color;
+    }
+  }
+}

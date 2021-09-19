@@ -1,0 +1,46 @@
+.comments-area {
+  margin-top: rem(48px);
+
+  .comment-form-comment {
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  .submit {
+    font-size: rem(13px);
+    letter-spacing: 0.025em;
+    text-transform: capitalize;
+    background: $knowpress_primary_color;
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: rem(4px);
+    transition: $knowpress_global_transition;
+    padding: rem(12px) rem(16px);
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+
+    &:hover {
+      background-color: $knowpress_primary_text_color;
+    }
+  }
+
+  .comment-list {
+    list-style: none;
+
+    ul, ol {
+      list-style: none;
+    }
+  }
+}
+
+#cancel-comment-reply-link {
+  color: $knowpress_primary_color;
+  text-decoration: none;
+
+  &:hover {
+    color: $knowpress_primary_text_color;
+  }
+}

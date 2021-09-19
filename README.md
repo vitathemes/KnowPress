@@ -1,11 +1,13 @@
 # KnowPress - [Demo](demo.vitathemes.com/knowpress) | [Download](https://wordpress.org/themes/knowpress/)
-KnowPress is a simple, super fast, and content-first blog theme
+KnowPress is a fast and minimal theme for documentation sites.
 
-![Home Page](screenshot.jpg)
+![Home Page](screenshot.png)
 
 ## Features
+* Compatible with [WeDocs](https://wordpress.org/plugins/wedocs/)
 * No additional JS
 * Sass for stylesheets
+* Compatible with [Contact Form 7](https://wordpress.org/plugins/contact-form-7)
 * Fast & lightweight (Google Speed (PageSpeed Insights): 100/100)
 * Theme options built directly into WordPress native live theme customizer
 * Responsive design

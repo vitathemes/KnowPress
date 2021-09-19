@@ -1,0 +1,24 @@
+/* Main column width */
+.wp-block {
+  max-width: 678px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 100%;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.block-editor-block-preview__container {
+  min-height: 45px;
+}
+
+
+@import "../sass/settings/variables";
+@import "elements/typography";
+@import "elements/list";
+@import "block-styles/block-styles";

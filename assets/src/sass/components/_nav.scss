@@ -1,0 +1,42 @@
+.c-nav {
+  list-style: none;
+  padding: rem(32px 32px);
+  margin: 0;
+
+  @include mq(desktop) {
+    display: flex;
+    padding: rem(30px) 0;
+  }
+}
+
+.s-nav {
+
+  li {
+    margin-bottom: rem(24px);
+
+    @include mq(desktop) {
+      margin-bottom: 0;
+      margin-right: rem(32px);
+    }
+  }
+
+  a {
+    font-weight: 600;
+    font-size: rem(16px);
+    line-height: rem(19px);
+    color: $knowpress_primary_color;
+    transition: $knowpress_global_transition;
+    text-decoration: none;
+
+    &:hover {
+      color: $knowpress_primary_text_color;
+    }
+  }
+
+  li.current-menu-item {
+
+    a {
+      color: $knowpress_primary_text_color;
+    }
+  }
+}

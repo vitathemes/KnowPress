@@ -1,0 +1,152 @@
+//.c-search {
+//  display: flex;
+//}
+//
+//.c-search__label {
+//  flex-grow: 1;
+//}
+//
+//.c-search__submit {
+//
+//  margin-left: rem(10px);
+//}
+//
+//.c-search__field {
+//  width: 100%;
+//}
+
+.c-search-form {
+  position: relative;
+}
+
+.c-search-form__label {
+  display: block;
+  width: 100%;
+}
+
+.c-search-form__label__field {
+  background-color: #fff;
+  font-size: rem(12px);
+  border-radius: rem(4px);
+  border: 1px solid $knowpress_border_color;
+  padding: rem(12px 3px 12px 40px);
+  color: $knowpress_primary_text_color;
+  width: 100%;
+
+  @include mq(tablet) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.c-search-form__submit {
+  border: none;
+  background-color: transparent !important;
+  width: 1.45rem;
+  height: 1.45rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: rem(12px);
+  cursor: pointer;
+  padding: 0 !important;
+
+  &:hover {
+    background-color: transparent;
+
+    .c-search-form__submit__icon {
+      fill: $knowpress_primary_color;
+    }
+  }
+}
+
+
+.c-search-form__submit__icon {
+  width: 1.45rem;
+  height: 1.45rem;
+  fill: $knowpress_secondary_text_color;
+  transition: $knowpress_global_transition;
+}
+
+.c-widget.widget_search, .c-widget.woocommerce.widget_product_search {
+  .c-search-form__submit__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .c-search-form__submit {
+    padding-right: 0;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .c-search-form__label__field {
+    @include mq(tablet) {
+
+      &::placeholder {
+        font-size: rem(12px) !important;
+      }
+    }
+  }
+}
+
+
+// Inside Widget
+.c-widget .c-search-form {
+
+  .c-search-form__label__field {
+    padding: rem(16px);
+    background-color: #fff;
+    margin: rem(4px) 0;
+    border-radius: rem(4px);
+    font-family: inherit;
+    transition: $knowpress_global_transition;
+    width: 100%;
+    font-size: rem(12px);
+
+    @include mq(tablet) {
+      max-width: 100%;
+    }
+  }
+
+  .c-search-form__submit {
+    border: none;
+    background-color: transparent;
+    width: 1.75rem;
+    height: 1.75rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(8px);
+    left: unset;
+    cursor: pointer;
+    padding-left: 0;
+
+    @include mq(desktop) {
+      right: 0;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &:hover {
+
+      .c-search-form__submit__icon {
+        fill: $knowpress_primary_color;
+      }
+    }
+  }
+}
+
+
+.rtl {
+  .c-search-form__submit {
+    right: rem(8px) !important;
+    left: unset;
+    padding-right: rem(8px) !important;
+    padding-left: 0;
+  }
+
+  .c-search-form__label__field {
+    padding: rem(12px 40px 12px 3px);
+  }
+}
