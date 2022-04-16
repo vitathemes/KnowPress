@@ -112,6 +112,8 @@ if ( ! function_exists( 'knowpress_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		add_theme_support('editor-styles');
 	}
 endif;
 add_action( 'after_setup_theme', 'knowpress_setup' );
@@ -119,13 +121,13 @@ add_action( 'after_setup_theme', 'knowpress_setup' );
 /**
  * Registers an editor stylesheet for the theme.
  */
-add_action( 'enqueue_block_editor_assets',
+add_action( 'admin_head',
 	function () {
 		wp_enqueue_style( 'knowpress-editor-styles',
 			get_template_directory_uri() . '/assets/css/editor-style.css',
-			false,
+			[ 'wp-edit-blocks' ],
 			wp_get_theme()->get( 'Version' ) );
-	} );
+	}, 100 );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

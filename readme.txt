@@ -1,18 +1,24 @@
 === KnowPress ===
 
-Contributors: vitathemes, mrmolaei
+Contributors: vitathemes
 Tags: custom-header, custom-background, custom-logo, custom-menu, threaded-comments, translation-ready
 
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.0
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
 KnowPress is a fast and minimal theme for documentation sites.
+
+== Frequently Asked Questions ==
+
+What is the usage of this theme?
+
+- This theme will use for documentation.
 
 == Features ==
 * Compatible with [WeDocs](https://wordpress.org/plugins/wedocs/)
@@ -41,6 +47,9 @@ KnowPress is a fast and minimal theme for documentation sites.
 
 
 == Changelog ==
+
+= 1.0.2 =
+* Update readme file
 
 = 1.0.1 =
 * Fix keyboard navigation issue
