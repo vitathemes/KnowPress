@@ -121,7 +121,7 @@ add_action( 'after_setup_theme', 'knowpress_setup' );
 /**
  * Registers an editor stylesheet for the theme.
  */
-add_action( 'admin_head',
+add_action( 'enqueue_block_editor_assets',
 	function () {
 		wp_enqueue_style( 'knowpress-editor-styles',
 			get_template_directory_uri() . '/assets/css/editor-style.css',
